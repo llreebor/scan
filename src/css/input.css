@@ -57,6 +57,9 @@
 	.btn-primary {
 		@apply not-disabled:hover:bg-higlights-blue text-secondary-dark bg-white font-semibold not-disabled:hover:text-white active:text-white not-disabled:active:border-white;
 	}
+	.btn-outline {
+		@apply not-disabled:hover:bg-secondary-dark text-secondary-dark border-secondary-dark bg-transparent font-semibold not-disabled:hover:text-white active:text-white not-disabled:active:border-white;
+	}
 
 	/* Menu */
 	.menu-link {
@@ -81,8 +84,17 @@
 	button {
 		@apply cursor-pointer transition-colors disabled:cursor-not-allowed;
 	}
+	p {
+		@apply text-secondary-dark font-workSans;
+	}
 	h1 {
 		@apply text-[54px] leading-normal font-black tracking-[1px] text-white;
+	}
+	h2 {
+		@apply text-secondary-dark text-[46px] leading-normal font-black tracking-[0.5px];
+	}
+	h3 {
+		@apply text-secondary-dark text-[32px] leading-tight font-black tracking-[0.5px];
 	}
 }
 
