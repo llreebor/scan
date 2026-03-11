@@ -17,10 +17,22 @@
 	</head>
 	<body class="relative h-full bg-white">
 		<div class="wrapper flex min-h-full flex-col">
-			<!-- Header & Hero & Logos  -->
-			<div>
+			<!-- Header & Hero -->
+			<div class="with-image-bg bg-linear-(--color-gradient-primary-red)">
+				<!-- Image BG -->
+				<img
+					class="image-bg"
+					src="./images/home/hero-image.png"
+					alt="hero image"
+				/>
+				<!-- TODO: Make Gradient as CSS -->
+				<img
+					class="absolute bottom-0 left-0 w-full"
+					src="./images/home/bottom gradient.svg"
+					alt="hero image"
+				/>
 				<!-- Header -->
-				<header class="bg-primary-red py-5">
+				<header class="py-5">
 					<div class="container mx-auto">
 						<div
 							class="flex flex-wrap items-center justify-between md:flex-nowrap"
@@ -101,7 +113,7 @@
 				</header>
 
 				<!-- Hero -->
-				<section class="bg-primary-red pt-55 pb-19 lg:pb-49">
+				<section class="pt-55 pb-19 lg:pb-49">
 					<div class="container">
 						<h1>Creators of Branded Content</h1>
 						<a href="#" class="btn btn-primary mt-5 md:mt-6.5">
@@ -128,11 +140,16 @@
 						</a>
 					</div>
 				</section>
+			</div>
 
+			<!-- Main Content -->
+			<main class="flex-auto">
 				<!-- Logos -->
-				<section class="bg-primary-red">
+				<section class="bg-primary-red pt-4 pb-11 md:pb-12.5">
 					<div class="container">
-						<ul class="grid grid-cols-4 place-items-center space-y-4 space-x-4">
+						<ul
+							class="grid grid-cols-4 place-items-center gap-4 lg:grid-cols-8"
+						>
 							<li>
 								<img src="./images/home/hero-logo-1.svg" alt="hero logo" />
 							</li>
@@ -155,16 +172,39 @@
 								<img src="./images/home/hero-logo-7.png" alt="hero logo" />
 							</li>
 							<li>
-								<img src="./images/home/hero-logo-8.svg" alt="hero logo" />
+								<img
+									class="size-11 lg:size-full"
+									src="./images/home/hero-logo-8.svg"
+									alt="hero logo"
+								/>
+							</li>
+							<li>
+								<img src="./images/home/hero-logo-9.png" alt="hero logo" />
+							</li>
+							<li>
+								<img src="./images/home/hero-logo-10.png" alt="hero logo" />
+							</li>
+							<li>
+								<img src="./images/home/hero-logo-11.png" alt="hero logo" />
+							</li>
+							<li>
+								<img src="./images/home/hero-logo-12.png" alt="hero logo" />
+							</li>
+							<li>
+								<img src="./images/home/hero-logo-13.png" alt="hero logo" />
+							</li>
+							<li>
+								<img src="./images/home/hero-logo-14.png" alt="hero logo" />
+							</li>
+							<li>
+								<img src="./images/home/hero-logo-15.svg" alt="hero logo" />
+							</li>
+							<li>
+								<img src="./images/home/hero-logo-16.png" alt="hero logo" />
 							</li>
 						</ul>
 					</div>
 				</section>
-			</div>
-
-			<!-- Main Content -->
-			<main class="flex-auto">
-				<div class="container mt-20"></div>
 			</main>
 
 			<!-- Footer -->

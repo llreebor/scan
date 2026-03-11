@@ -22,16 +22,13 @@
 	--color-higlights-blue: #2a2444;
 	--color-higlights-cyan-dark: #079897;
 
-	--color-header-top-gradient: linear-gradient(
+	--color-hero-top-gradient: linear-gradient(
 		180deg,
 		#ab2430 0%,
 		rgba(171, 36, 48, 0) 100%
 	);
-	--color-header-bottom-gradient: linear-gradient(
-		180deg,
-		#ab2430 0%,
-		rgba(171, 36, 48, 0) 100%
-	);
+	--color-gradient-primary-red: 180deg, #ab2430 0%, #ab243000 100%;
+	--color-hero-bottom-gradient: 90deg, #ab2430 0%, rgba(171, 36, 48, 0) 100%;
 
 	/* Animations */
 	--animate-fadeIn: fadeIn 0.3s linear;
@@ -66,7 +63,7 @@
 		@apply flex shrink-0 items-center gap-1.5 py-3 text-sm font-medium text-white hover:text-white/80 sm:text-base;
 	}
 	.submenu {
-		@apply invisible absolute top-full right-0 min-w-55 scale-95 overflow-hidden rounded-lg bg-white opacity-0 transition-all group-hover/submenu:visible group-hover/submenu:grid group-hover/submenu:scale-100 group-hover/submenu:opacity-100;
+		@apply bg-primary-red invisible absolute top-full right-0 min-w-55 scale-95 overflow-hidden rounded-lg opacity-0 transition-all group-hover/submenu:visible group-hover/submenu:grid group-hover/submenu:scale-100 group-hover/submenu:opacity-100;
 	}
 	.submenu-link {
 		@apply bg-primary-red hover:bg-primary-red-dark flex p-3 text-sm font-medium text-white sm:text-base md:p-4;
@@ -96,6 +93,6 @@
 		@apply relative z-0;
 	}
 	.image-bg {
-		@apply absolute inset-0 -z-10 h-auto w-full max-w-full object-cover;
+		@apply absolute inset-0 -z-10 h-full w-full max-w-full object-cover;
 	}
 }
