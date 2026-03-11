@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" class="h-full">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tailwindcss v4</title>
+		<!-- Main CSS File -->
+		<link rel="stylesheet" href="./css/output.css" />
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="relative h-full bg-white">
+		<div class="wrapper flex min-h-full flex-col">
+			<!-- Header & Hero & Logos  -->
+			<div>
+				<!-- Header -->
+				<header class="bg-primary-red py-5">
+					<div class="container mx-auto">
+						<div
+							class="flex flex-wrap items-center justify-between md:flex-nowrap"
+						>
+							<!-- Logo -->
+							<a href="#">
+								<img src="./images/global/logo.svg" alt="logo image" />
+							</a>
+
+							<!-- Lang Select -->
+							<div class="font-bold text-white uppercase md:order-3">
+								TODO:SELECT
+							</div>
+
+							<!-- Desktop menu -->
+							<nav
+								id="menu"
+								role="navigation"
+								aria-label="Main menu"
+								class="menu z-10 mt-4 flex w-full md:order-2 md:mt-0 md:mr-10 md:ml-auto md:w-auto lg:mr-13.5"
+							>
+								<ul
+									class="flex w-full items-center justify-center gap-5.5 sm:gap-10 lg:gap-13.5"
+								>
+									<li class="menu-item hidden sm:flex">
+										<a href="#" class="menu-link">Home</a>
+									</li>
+									<li class="menu-item">
+										<a href="#" class="menu-link">Services</a>
+									</li>
+									<li class="menu-item">
+										<a href="#" class="menu-link">Cases</a>
+									</li>
+									<!-- Menu Item With Submenu -->
+									<li class="menu-item group/submenu submenu-trigger relative">
+										<button
+											class="menu-link"
+											aria-haspopup="true"
+											aria-expanded="false"
+										>
+											<span>About us</span>
+											<svg
+												aria-hidden="true"
+												class="shrink-0 transition-transform group-hover/submenu:rotate-180"
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<g clip-path="url(#clip0_4001_1207)">
+													<path
+														d="M11.5312 16.8574L5.67188 10.998C5.37891 10.7344 5.37891 10.2949 5.67188 10.002C5.93555 9.73828 6.375 9.73828 6.66797 10.002L12.0293 15.3633L17.3906 10.002C17.6543 9.73828 18.0938 9.73828 18.3574 10.002C18.6504 10.2656 18.6504 10.7344 18.3574 10.998L12.498 16.8574C12.2344 17.1211 11.7949 17.1211 11.5312 16.8574Z"
+														fill="white"
+														class="fill-current"
+													/>
+												</g>
+												<defs>
+													<clipPath id="clip0_4001_1207">
+														<rect width="24" height="24" fill="white" />
+													</clipPath>
+												</defs>
+											</svg>
+										</button>
+										<!-- Submenu -->
+										<ul class="submenu" aria-label="More submenu">
+											<li><a class="submenu-link" href="#">About us</a></li>
+											<li><a class="submenu-link" href="#">Jobs</a></li>
+										</ul>
+									</li>
+									<li class="menu-item">
+										<a href="#" class="menu-link">Contact</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</header>
+
+				<!-- Hero -->
+				<section class="bg-primary-red pt-55 pb-19 lg:pb-49">
+					<div class="container">
+						<h1>Creators of Branded Content</h1>
+						<a href="#" class="btn btn-primary mt-5 md:mt-6.5">
+							Work with us
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<g clip-path="url(#clip0_4001_17)">
+									<path
+										d="M19.7812 12.5312L14.5312 17.7812C14.25 18.0625 13.7812 18.0625 13.4688 17.7812C13.1875 17.5 13.1875 17 13.4688 16.7188L17.4375 12.75H4.75C4.34375 12.75 4 12.4062 4 12C4 11.5938 4.34375 11.25 4.75 11.25H17.4375L13.4688 7.28125C13.1875 7 13.1875 6.5 13.4688 6.21875C13.75 5.9375 14.25 5.9375 14.5312 6.21875L19.7812 11.4688C20.0625 11.75 20.0625 12.25 19.7812 12.5312Z"
+										class="fill-current"
+									/>
+								</g>
+								<defs>
+									<clipPath id="clip0_4001_17">
+										<rect width="24" height="24" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+					</div>
+				</section>
+
+				<!-- Logos -->
+				<section class="bg-primary-red">
+					<div class="container">
+						<ul class="grid grid-cols-4 place-items-center space-y-4 space-x-4">
+							<li>
+								<img src="./images/home/hero-logo-1.svg" alt="hero logo" />
+							</li>
+							<li>
+								<img src="./images/home/hero-logo-2.svg" alt="hero logo" />
+							</li>
+							<li>
+								<img src="./images/home/hero-logo-3.svg" alt="hero logo" />
+							</li>
+							<li>
+								<img src="./images/home/hero-logo-4.svg" alt="hero logo" />
+							</li>
+							<li>
+								<img src="./images/home/hero-logo-5.svg" alt="hero logo" />
+							</li>
+							<li>
+								<img src="./images/home/hero-logo-6.png" alt="hero logo" />
+							</li>
+							<li>
+								<img src="./images/home/hero-logo-7.png" alt="hero logo" />
+							</li>
+							<li>
+								<img src="./images/home/hero-logo-8.svg" alt="hero logo" />
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+
+			<!-- Main Content -->
+			<main class="flex-auto">
+				<div class="container mt-20"></div>
+			</main>
+
+			<!-- Footer -->
+			<footer class="flex h-40 items-center justify-center bg-slate-300">
+				FOOTER
+			</footer>
+		</div>
+
+		<!-- Libs -->
+
+		<!-- Custom JS -->
+		<script src="./js/main.js"></script>
+	</body>
+</html>

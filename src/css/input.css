@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/* Variables */
+@theme {
+	/* Container */
+	--container-width: 1160px;
+	--container-side-padding: 30px;
+	--container-max-width: calc(
+		var(--container-width) + (2 * var(--container-side-padding))
+	);
+
+	/* Fonts */
+	--font-workSans: "Work Sans", sans-serif;
+
+	/* Colors */
+	--color-primary-red: #ab2430;
+	--color-primary-red-dark: #781922;
+	--color-secondary-dark: #222;
+	--color-secondary-dark-gray: #808080;
+	--color-secondary-gray: #adadad;
+	--color-secondary-light: rgba(138, 139, 138, 0.2);
+	--color-higlights-blue: #2a2444;
+	--color-higlights-cyan-dark: #079897;
+
+	--color-header-top-gradient: linear-gradient(
+		180deg,
+		#ab2430 0%,
+		rgba(171, 36, 48, 0) 100%
+	);
+	--color-header-bottom-gradient: linear-gradient(
+		180deg,
+		#ab2430 0%,
+		rgba(171, 36, 48, 0) 100%
+	);
+
+	/* Animations */
+	--animate-fadeIn: fadeIn 0.3s linear;
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+}
+
+/* Container max-width & paddings */
+@utility container {
+	@apply max-w-max-width mx-auto px-(--container-side-padding);
+}
+
+/* Custom Components */
+@layer components {
+	/* TODO:Button */
+	.btn {
+		@apply inline-flex items-center gap-1.5 rounded-lg border-2 border-transparent px-4 py-3 transition-colors disabled:cursor-not-allowed disabled:opacity-85;
+	}
+	.btn-primary {
+		@apply not-disabled:hover:bg-higlights-blue text-secondary-dark bg-white font-semibold not-disabled:hover:text-white active:text-white not-disabled:active:border-white;
+	}
+
+	/* Menu */
+	.menu-link {
+		@apply flex shrink-0 items-center gap-1.5 py-3 text-sm font-medium text-white hover:text-white/80 sm:text-base;
+	}
+	.submenu {
+		@apply invisible absolute top-full right-0 min-w-55 scale-95 overflow-hidden rounded-lg bg-white opacity-0 transition-all group-hover/submenu:visible group-hover/submenu:grid group-hover/submenu:scale-100 group-hover/submenu:opacity-100;
+	}
+	.submenu-link {
+		@apply bg-primary-red hover:bg-primary-red-dark flex p-3 text-sm font-medium text-white sm:text-base md:p-4;
+	}
+}
+
+/* Base Elements  */
+@layer base {
+	body {
+		@apply font-workSans font-normal;
+	}
+	a {
+		@apply transition-colors;
+	}
+	button {
+		@apply cursor-pointer transition-colors disabled:cursor-not-allowed;
+	}
+	h1 {
+		@apply text-[54px] leading-normal font-black tracking-[1px] text-white;
+	}
+}
+
+/* Utility Classes */
+@layer utilities {
+	/* Image Background */
+	.with-image-bg {
+		@apply relative z-0;
+	}
+	.image-bg {
+		@apply absolute inset-0 -z-10 h-auto w-full max-w-full object-cover;
+	}
+}
