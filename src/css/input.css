@@ -52,13 +52,22 @@
 @layer components {
 	/* TODO:Button */
 	.btn {
-		@apply inline-flex items-center gap-1.5 rounded-lg border-2 border-transparent px-4 py-3 transition-colors disabled:cursor-not-allowed disabled:opacity-85;
+		@apply inline-flex items-center gap-1.5 rounded-lg border-2 border-transparent transition-colors disabled:cursor-not-allowed disabled:opacity-85;
 	}
 	.btn-primary {
-		@apply not-disabled:hover:bg-higlights-blue text-secondary-dark bg-white font-semibold not-disabled:hover:text-white active:text-white not-disabled:active:border-white;
+		@apply not-disabled:hover:bg-higlights-blue text-secondary-dark bg-white px-4 py-3 font-semibold not-disabled:hover:text-white active:text-white not-disabled:active:border-white;
 	}
 	.btn-outline {
-		@apply not-disabled:hover:bg-secondary-dark text-secondary-dark border-secondary-dark bg-transparent font-semibold not-disabled:hover:text-white active:text-white not-disabled:active:border-white;
+		@apply not-disabled:hover:bg-secondary-dark text-secondary-dark border-secondary-dark bg-transparent px-4 py-3 font-semibold not-disabled:hover:text-white active:text-white not-disabled:active:border-white;
+	}
+	.btn-outline-blue {
+		@apply not-disabled:hover:bg-higlights-blue text-higlights-blue border-higlights-blue bg-transparent px-4 py-3 font-semibold not-disabled:hover:text-white active:text-white not-disabled:active:border-white;
+	}
+	.btn-link-red {
+		@apply after:bg-primary-red text-primary-red not-disabled:hover:after:text-primary-red relative border-none bg-transparent px-0 py-1 font-semibold after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:scale-0 after:transition-transform not-disabled:hover:after:scale-100 active:after:scale-100;
+	}
+	.btn-link-dark {
+		@apply after:bg-higlights-blue text-higlights-blue not-disabled:hover:after:text-higlights-blue relative border-none bg-transparent px-0 py-1 font-semibold after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:scale-0 after:transition-transform not-disabled:hover:after:scale-100 active:after:scale-100;
 	}
 
 	/* Menu */
@@ -95,6 +104,9 @@
 	}
 	h3 {
 		@apply text-secondary-dark text-[32px] leading-tight font-black tracking-[0.5px];
+	}
+	h4 {
+		@apply text-secondary-dark text-2xl leading-normal font-black tracking-[0.5px];
 	}
 }
 
