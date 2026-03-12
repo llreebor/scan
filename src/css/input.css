@@ -17,6 +17,7 @@
 	--color-primary-red-dark: #781922;
 	--color-secondary-dark: #222;
 	--color-secondary-dark-gray: #808080;
+	--color-secondary-brand-gray: #8a8b8a;
 	--color-secondary-gray: #adadad;
 	--color-secondary-light: rgba(138, 139, 138, 0.2);
 	--color-higlights-blue: #2a2444;
@@ -112,16 +113,16 @@
 		@apply text-secondary-dark font-workSans;
 	}
 	h1 {
-		@apply text-[54px] leading-normal font-black tracking-[1px] text-white;
+		@apply text-[54px] leading-normal font-black tracking-[1px] wrap-break-word text-white;
 	}
 	h2 {
-		@apply text-secondary-dark text-[46px] leading-normal font-black tracking-[0.5px];
+		@apply text-secondary-dark text-[46px] leading-normal font-black tracking-[0.5px] wrap-break-word;
 	}
 	h3 {
-		@apply text-secondary-dark text-[32px] leading-tight font-black tracking-[0.5px];
+		@apply text-secondary-dark text-[32px] leading-tight font-black tracking-[0.5px] wrap-break-word;
 	}
 	h4 {
-		@apply text-secondary-dark text-2xl leading-normal font-black tracking-[0.5px];
+		@apply text-secondary-dark text-2xl leading-normal font-black tracking-[0.5px] wrap-break-word;
 	}
 }
 
