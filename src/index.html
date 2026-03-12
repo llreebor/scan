@@ -25,7 +25,7 @@
 					src="./images/home/hero-image.png"
 					alt="hero image"
 				/>
-				<!-- TODO: Make Gradient as CSS -->
+				<!-- Gradients -->
 				<img
 					class="absolute bottom-0 left-0 -z-10 w-full"
 					src="./images/home/bottom gradient.svg"
@@ -48,8 +48,66 @@
 							</a>
 
 							<!-- Lang Select -->
-							<div class="font-bold text-white uppercase md:order-3">
-								TODO:SELECT
+							<div class="z-20 flex items-center gap-1.5 md:order-3">
+								<!-- Icon -->
+								<img src="./images/icons/lang.svg" alt="language icon" />
+
+								<!-- Select -->
+								<div class="select-group group/select relative z-0">
+									<!-- Hidden input for form submission -->
+									<input type="hidden" name="year" class="selected-value" />
+
+									<!-- Trigger button -->
+									<button
+										type="button"
+										class="select-trigger"
+										aria-haspopup="listbox"
+										aria-expanded="false"
+									>
+										<span class="selected-option"></span>
+
+										<svg
+											class="select-icon"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<g clip-path="url(#clip0_4001_1207)">
+												<path
+													d="M11.5312 16.8574L5.67188 10.998C5.37891 10.7344 5.37891 10.2949 5.67188 10.002C5.93555 9.73828 6.375 9.73828 6.66797 10.002L12.0293 15.3633L17.3906 10.002C17.6543 9.73828 18.0938 9.73828 18.3574 10.002C18.6504 10.2656 18.6504 10.7344 18.3574 10.998L12.498 16.8574C12.2344 17.1211 11.7949 17.1211 11.5312 16.8574Z"
+													fill="white"
+													class="fill-current"
+												/>
+											</g>
+											<defs>
+												<clipPath id="clip0_4001_1207">
+													<rect width="24" height="24" fill="white" />
+												</clipPath>
+											</defs>
+										</svg>
+									</button>
+
+									<!-- Options list -->
+									<ul class="select-options" role="listbox">
+										<li role="option">
+											<button type="button" class="select-option">
+												English
+											</button>
+										</li>
+										<li role="option">
+											<button type="button" class="select-option">
+												Français
+											</button>
+										</li>
+										<li role="option">
+											<button type="button" class="select-option">
+												Español
+											</button>
+										</li>
+									</ul>
+								</div>
 							</div>
 
 							<!-- Desktop menu -->

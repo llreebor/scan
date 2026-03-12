@@ -22,13 +22,8 @@
 	--color-higlights-blue: #2a2444;
 	--color-higlights-cyan-dark: #079897;
 
-	--color-hero-top-gradient: linear-gradient(
-		180deg,
-		#ab2430 0%,
-		rgba(171, 36, 48, 0) 100%
-	);
+	/* Gradients */
 	--color-gradient-primary-red: 180deg, #ab2430 0%, #ab243000 100%;
-	--color-hero-bottom-gradient: 90deg, #ab2430 0%, rgba(171, 36, 48, 0) 100%;
 
 	/* Animations */
 	--animate-fadeIn: fadeIn 0.3s linear;
@@ -79,6 +74,26 @@
 	}
 	.submenu-link {
 		@apply bg-primary-red hover:bg-primary-red-dark flex p-3 text-sm font-medium text-white sm:text-base md:p-4;
+	}
+
+	/* Select */
+	.select-group {
+		@apply [.disabled]:cursor-not-allowed;
+	}
+	.select-trigger {
+		@apply flex shrink-0 items-center gap-1.5 text-sm font-medium text-white hover:text-white/80 sm:text-base;
+	}
+	.selected-option {
+		@apply m-0 p-0 font-medium;
+	}
+	.select-icon {
+		@apply transition-transform group-[.active]/select:rotate-180;
+	}
+	.select-options {
+		@apply bg-primary-red absolute top-full right-0 z-10 mt-2 hidden w-full min-w-26 transform overflow-hidden rounded-md border-none transition-all group-[.active]/select:block;
+	}
+	.select-option {
+		@apply bg-primary-red hover:bg-primary-red-dark z-10 flex w-full p-3 text-sm font-medium text-white sm:text-base md:p-4;
 	}
 }
 

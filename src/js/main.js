@@ -96,8 +96,81 @@ function initializeMobileMenu() {
 	})
 }
 
+// Initialize custom language select
+function initializeCustomSelects() {
+	const selects = document.querySelectorAll(".select-group")
+
+	selects.forEach((select) => {
+		const trigger = select.querySelector(".select-trigger")
+		const display = select.querySelector(".selected-option")
+		const valueInput = select.querySelector(".selected-value")
+		const optionsContainer = select.querySelector(".select-options")
+		const options = select.querySelectorAll(".select-option")
+		const errorMsg = select.querySelector(".select-error")
+
+		if (!trigger || !display || !optionsContainer || !options.length) return
+
+		// Select first option by default
+		const firstOption = options[0]
+		if (firstOption) {
+			display.innerText = firstOption.innerText.trim()
+			if (valueInput) valueInput.value = firstOption.innerText.trim()
+		}
+
+		// Toggle dropdown
+		trigger.addEventListener("click", (e) => {
+			if (select.classList.contains("disabled")) return // Prevent interaction if disabled
+			select.classList.toggle("active")
+			e.stopPropagation()
+			optionsContainer.classList.remove("hidden")
+			trigger.classList.toggle("active")
+		})
+
+		// Select option
+		options.forEach((option) => {
+			option.addEventListener("click", () => {
+				const selectedText = option.innerText
+				display.innerText = selectedText
+				valueInput.value = selectedText
+
+				optionsContainer.classList.add("hidden")
+				trigger.classList.remove("active")
+
+				// Remove error, add success
+				select.classList.remove("error")
+				select.classList.add("success")
+				select.classList.remove("active")
+
+				// Hide error message
+				if (errorMsg) errorMsg.classList.add("hidden")
+			})
+		})
+
+		// Close dropdown when clicking outside
+		document.addEventListener("click", (e) => {
+			if (!select.contains(e.target)) {
+				optionsContainer.classList.add("hidden")
+				trigger.classList.remove("active")
+				select.classList.remove("active")
+			}
+		})
+
+		// Close dropdown on Escape key
+		document.addEventListener("keydown", (e) => {
+			if (e.key === "Escape") {
+				optionsContainer.classList.add("hidden")
+				trigger.classList.remove("active")
+				select.classList.remove("active")
+			}
+		})
+	})
+}
+
 // Inits
 document.addEventListener("DOMContentLoaded", () => {
 	// Mobile Menu
 	initializeMobileMenu()
+
+	// Lang Select
+	initializeCustomSelects()
 })
