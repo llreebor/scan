@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en" class="h-full">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Service | eBooks</title>
+		<!-- Main CSS File -->
+		<link rel="stylesheet" href="./css/output.css" />
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="relative h-full bg-white">
+		<div class="wrapper flex min-h-full flex-col">
+			<!-- Header & Hero -->
+			<div class="with-image-bg bg-primary-red">
+				<!-- Header -->
+				<header class="py-5">
+					<div class="container mx-auto">
+						<div
+							class="flex flex-wrap items-center justify-between md:flex-nowrap"
+						>
+							<!-- Logo -->
+							<a href="#">
+								<img src="./images/global/logo.svg" alt="logo image" />
+							</a>
+
+							<!-- Lang Select -->
+							<div class="z-20 flex items-center gap-1.5 md:order-3">
+								<!-- Icon -->
+								<img src="./images/icons/lang.svg" alt="language icon" />
+
+								<!-- Select -->
+								<div class="select-group group/select relative z-0">
+									<!-- Hidden input for form submission -->
+									<input type="hidden" name="year" class="selected-value" />
+
+									<!-- Trigger button -->
+									<button
+										type="button"
+										class="select-trigger"
+										aria-haspopup="listbox"
+										aria-expanded="false"
+									>
+										<span class="selected-option"></span>
+
+										<svg
+											class="select-icon"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<g clip-path="url(#clip0_4001_1207)">
+												<path
+													d="M11.5312 16.8574L5.67188 10.998C5.37891 10.7344 5.37891 10.2949 5.67188 10.002C5.93555 9.73828 6.375 9.73828 6.66797 10.002L12.0293 15.3633L17.3906 10.002C17.6543 9.73828 18.0938 9.73828 18.3574 10.002C18.6504 10.2656 18.6504 10.7344 18.3574 10.998L12.498 16.8574C12.2344 17.1211 11.7949 17.1211 11.5312 16.8574Z"
+													fill="white"
+													class="fill-current"
+												/>
+											</g>
+											<defs>
+												<clipPath id="clip0_4001_1207">
+													<rect width="24" height="24" fill="white" />
+												</clipPath>
+											</defs>
+										</svg>
+									</button>
+
+									<!-- Options list -->
+									<ul class="select-options" role="listbox">
+										<li role="option">
+											<button type="button" class="select-option">
+												English
+											</button>
+										</li>
+										<li role="option">
+											<button type="button" class="select-option">
+												Français
+											</button>
+										</li>
+										<li role="option">
+											<button type="button" class="select-option">
+												Español
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- Desktop menu -->
+							<nav
+								id="menu"
+								role="navigation"
+								aria-label="Main menu"
+								class="menu z-10 mt-4 flex w-full md:order-2 md:mt-0 md:mr-10 md:ml-auto md:w-auto lg:mr-13.5"
+							>
+								<ul
+									class="flex w-full items-center justify-between gap-5.5 sm:gap-10 lg:gap-13.5"
+								>
+									<li class="menu-item hidden sm:flex">
+										<a href="#" class="menu-link">Home</a>
+									</li>
+									<li class="menu-item">
+										<a href="#" class="menu-link">Services</a>
+									</li>
+									<li class="menu-item">
+										<a href="#" class="menu-link">Cases</a>
+									</li>
+									<!-- Menu Item With Submenu -->
+									<li class="menu-item group/submenu submenu-trigger relative">
+										<button
+											class="menu-link"
+											aria-haspopup="true"
+											aria-expanded="false"
+										>
+											<span>About us</span>
+											<svg
+												aria-hidden="true"
+												class="shrink-0 transition-transform group-hover/submenu:rotate-180"
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<g clip-path="url(#clip0_4001_1207)">
+													<path
+														d="M11.5312 16.8574L5.67188 10.998C5.37891 10.7344 5.37891 10.2949 5.67188 10.002C5.93555 9.73828 6.375 9.73828 6.66797 10.002L12.0293 15.3633L17.3906 10.002C17.6543 9.73828 18.0938 9.73828 18.3574 10.002C18.6504 10.2656 18.6504 10.7344 18.3574 10.998L12.498 16.8574C12.2344 17.1211 11.7949 17.1211 11.5312 16.8574Z"
+														fill="white"
+														class="fill-current"
+													/>
+												</g>
+												<defs>
+													<clipPath id="clip0_4001_1207">
+														<rect width="24" height="24" fill="white" />
+													</clipPath>
+												</defs>
+											</svg>
+										</button>
+										<!-- Submenu -->
+										<ul class="submenu" aria-label="More submenu">
+											<li><a class="submenu-link" href="#">About us</a></li>
+											<li><a class="submenu-link" href="#">Jobs</a></li>
+										</ul>
+									</li>
+									<li class="menu-item">
+										<a href="#" class="menu-link">Contact</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</header>
+
+				<!-- Hero -->
+				<section class="py-21.5 md:py-30">
+					<div class="container">
+						<h3 class="text-secondary-gray">Services</h3>
+						<h1 class="mt-6">e-Books</h1>
+						<p class="mt-10.5 max-w-216.25 text-xl leading-relaxed text-white">
+							Everyone’s got a smartphone, tablet or e-reader, and the e-book
+							industry is booming. We have more than a decade’s worth of
+							experience of producing great storytelling packaged as
+							high-quality design products, and our skilled copywriters take
+							pride in helping brands like yours tell their stories in
+							compelling, convincing ways. This is the time to invest in a
+							beautifully designed, well-written e-book of your own to make your
+							brand stand out from the crowd.
+						</p>
+					</div>
+				</section>
+			</div>
+
+			<!-- Main Content -->
+			<main class="flex-auto">
+				<!-- Services -->
+				<section class="pt-21">
+					<div class="container">
+						<!-- Service Grid -->
+						<div class="mt-11 space-y-21 md:mt-14.5 md:space-y-29">
+							<!-- Service Item -->
+							<div
+								class="flex w-full flex-col gap-10.5 md:flex-row md:items-center lg:gap-12"
+							>
+								<div class="md:max-w-100 md:shrink-0 lg:max-w-161.5">
+									<h3 class="mt-1.5 text-[42px] md:text-[46px]">
+										Tell your story with long-form journalism
+									</h3>
+									<p class="mt-5 text-base leading-relaxed">
+										There’s a place for a well-designed website and snappy,
+										attention-grabbing social media posts – but some things are
+										better said in long-form copy. An e-book allows you to tell
+										your story without holding back on facts or format. You can
+										use all your favourite images and really let them shine,
+										while still having the space for opinion, interviews,
+										details and background information. Whether you choose a
+										subtle or a very literal approach to storytelling, an e-book
+										allows for both volume and sophistication.
+									</p>
+								</div>
+
+								<div class="h-full w-full">
+									<img
+										class="h-auto w-full max-w-full object-cover"
+										src="./images/services/service-ebook-1.png"
+										alt="service image"
+									/>
+								</div>
+							</div>
+
+							<!-- Service Item Reverse -->
+							<div
+								class="flex w-full flex-col gap-10.5 md:flex-row-reverse md:items-center lg:gap-12"
+							>
+								<div class="md:max-w-100 md:shrink-0 lg:max-w-161.5">
+									<h3 class="mt-1.5 text-[42px] md:text-[46px]">
+										Allow your brand to shine
+									</h3>
+									<p class="mt-5 text-base leading-relaxed">
+										Whether it takes the shape of a product catalogue of sorts
+										or of a magazine experience, your e-book can strengthen your
+										visual identity by incorporating your brand typefaces,
+										colours and visual expression. While the words will tell the
+										story, the visual experience of the e-book adds another
+										layer that’s more difficult to achieve on social media,
+										making it an emotive touchpoint, almost like a world of its
+										own. Think of your e-book as a manifesto – a tangible,
+										beautiful product that embodies all your values and shows
+										your brand for what it really is.
+									</p>
+								</div>
+
+								<div class="h-full w-full">
+									<img
+										class="h-auto w-full max-w-full object-cover"
+										src="./images/services/service-ebook-2.png"
+										alt="service image"
+									/>
+								</div>
+							</div>
+
+							<!-- Service Item -->
+							<div
+								class="flex w-full flex-col gap-10.5 md:flex-row md:items-center lg:gap-12"
+							>
+								<div class="md:max-w-100 md:shrink-0 lg:max-w-161.5">
+									<h3 class="mt-1.5 text-[42px] md:text-[46px]">
+										You give and you get
+									</h3>
+									<p class="mt-5 text-base leading-relaxed">
+										Put enjoyable content and useful information into your
+										e-book, and it becomes a gift to the world – or at least to
+										your target audience, for whom this particular content is
+										gold. You’ll provide it free of charge, of course – but in
+										exchange, you can get targeted leads. Your potential
+										customers will gladly give you their email address in
+										exchange for a beautiful, interesting read. They’ll click
+										through to your website too, of course, giving you the kind
+										of traffic that boosts your SEO credentials.
+									</p>
+								</div>
+
+								<div class="h-full w-full">
+									<img
+										class="h-auto w-full max-w-full object-cover"
+										src="./images/services/service-ebook-3.png"
+										alt="service image"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- CTA -->
+				<section class="pt-21 md:pt-26.5">
+					<div class="container">
+						<div
+							class="bg-primary-red-dark relative space-y-4 overflow-hidden px-7.5 py-10.5 lg:px-10 xl:px-17.5"
+						>
+							<!-- Content -->
+							<div>
+								<h2 class="text-white max-md:text-[39px]">Get in contact</h2>
+								<p class="text-lg leading-[1.75] text-white">
+									Contact our digital & print magazine experts today to take the
+									next steps towards publishing your magazine
+								</p>
+								<a href="#" class="btn btn-primary mt-5 md:mt-6.5">
+									Contact Us
+									<svg
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<g clip-path="url(#clip0_4001_17)">
+											<path
+												d="M19.7812 12.5312L14.5312 17.7812C14.25 18.0625 13.7812 18.0625 13.4688 17.7812C13.1875 17.5 13.1875 17 13.4688 16.7188L17.4375 12.75H4.75C4.34375 12.75 4 12.4062 4 12C4 11.5938 4.34375 11.25 4.75 11.25H17.4375L13.4688 7.28125C13.1875 7 13.1875 6.5 13.4688 6.21875C13.75 5.9375 14.25 5.9375 14.5312 6.21875L19.7812 11.4688C20.0625 11.75 20.0625 12.25 19.7812 12.5312Z"
+												class="fill-current"
+											/>
+										</g>
+										<defs>
+											<clipPath id="clip0_4001_17">
+												<rect width="24" height="24" fill="white" />
+											</clipPath>
+										</defs>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Services -->
+				<section>
+					<div class="container">
+						<!-- Service Grid -->
+						<div class="mt-11 space-y-7.5 md:mt-14.5">
+							<!-- Service Item Reverse -->
+							<div
+								class="bg-secondary-light flex w-full flex-col gap-10.5 p-7.5 md:flex-row-reverse md:items-center lg:gap-12"
+							>
+								<div class="md:max-w-100 md:shrink-0 lg:max-w-148.5">
+									<h3 class="text-[42px] md:text-[46px]">
+										Build trust through expertise
+									</h3>
+									<p class="mt-5 text-base leading-relaxed">
+										You know what you’re talking about, because you’re talking
+										about the things you live and breathe every day of the week.
+										Go really niche and in-depth, the way an e-book allows you
+										to do, and you can really impress those to whom your
+										products or services are the most relevant. An e-book allows
+										you to showcase your expertise in a convincing, powerful
+										way, which is exactly how to build trust in your brand. Take
+										the readers on a journey not just of your brand, but of your
+										passion, knowledge and enthusiasm, and you’ll soon be the
+										go-to brand the moment they think about your field of
+										expertise.
+									</p>
+								</div>
+
+								<div class="h-full w-full">
+									<img
+										class="h-auto w-full max-w-full object-cover"
+										src="./images/services/service-ebook-4.png"
+										alt="service image"
+									/>
+								</div>
+							</div>
+							<!-- Service Item  -->
+							<div
+								class="bg-secondary-light flex w-full flex-col gap-10.5 p-7.5 md:flex-row md:items-center lg:gap-12"
+							>
+								<div class="md:max-w-100 md:shrink-0 lg:max-w-148.5">
+									<h3 class="text-[42px] md:text-[46px]">
+										Stand out from the crowd
+									</h3>
+									<p class="mt-5 text-base leading-relaxed">
+										Everyone’s got a website and a Facebook page, but not
+										everyone invests in producing an e-book. That’s because they
+										don’t need to – but by going that extra mile, you show that
+										you mean business and that you’re one step ahead. The good
+										thing is that it makes financial sense, too: you get the
+										control that comes with producing a book and the
+										sophistication of the experience of reading one, but without
+										the printing costs. Add the fact that you can repurpose the
+										content produced for the e-book on your site and in your
+										social channels, and you’ll see how it’ll quickly grow into
+										a multi-pronged approach that makes a whole lot of sense.
+									</p>
+								</div>
+
+								<div class="h-full w-full">
+									<img
+										class="h-auto w-full max-w-full object-cover"
+										src="./images/services/service-ebook-5.png"
+										alt="service image"
+									/>
+								</div>
+							</div>
+							<!-- Service Item Reverse -->
+							<div
+								class="bg-secondary-light flex w-full flex-col gap-10.5 p-7.5 md:flex-row-reverse md:items-center lg:gap-12"
+							>
+								<div class="md:max-w-100 md:shrink-0 lg:max-w-148.5">
+									<h3 class="text-[42px] md:text-[46px]">
+										Get to the core of your brand
+									</h3>
+									<p class="mt-5 text-base leading-relaxed">
+										If you’ve just been through brand workshops and
+										consultations and you know exactly what your brand is all
+										about, producing an e-book will be easy. If you haven’t, the
+										process will take you on that journey and help you get to
+										the core of what you’re really all about. In either case,
+										the result will be a product that presents your brand
+										clearly and beautifully, offering your audience an
+										enjoyable, informative read. Get in touch now to discuss
+										your options!
+									</p>
+								</div>
+
+								<div class="h-full w-full">
+									<img
+										class="h-auto w-full max-w-full object-cover"
+										src="./images/services/service-ebook-6.png"
+										alt="service image"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- CTA -->
+				<section class="pt-21 pb-11 md:py-26.5">
+					<div class="container">
+						<div
+							class="bg-primary-red relative space-y-4 overflow-hidden px-7.5 py-10.5 lg:px-10 xl:px-17.5"
+						>
+							<!-- Content -->
+							<div class="max-w-216.25">
+								<h2 class="text-white max-md:text-[39px]">Ready to Create?</h2>
+								<p class="text-lg leading-[1.75] text-white">
+									Our content marketing experts can tailor the right content for
+									your campaign and audience, get in contact now to book your
+									free consultation
+								</p>
+								<a href="#" class="btn btn-primary mt-5 md:mt-6.5">
+									Book Your Free Consultation
+									<svg
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<g clip-path="url(#clip0_4001_17)">
+											<path
+												d="M19.7812 12.5312L14.5312 17.7812C14.25 18.0625 13.7812 18.0625 13.4688 17.7812C13.1875 17.5 13.1875 17 13.4688 16.7188L17.4375 12.75H4.75C4.34375 12.75 4 12.4062 4 12C4 11.5938 4.34375 11.25 4.75 11.25H17.4375L13.4688 7.28125C13.1875 7 13.1875 6.5 13.4688 6.21875C13.75 5.9375 14.25 5.9375 14.5312 6.21875L19.7812 11.4688C20.0625 11.75 20.0625 12.25 19.7812 12.5312Z"
+												class="fill-current"
+											/>
+										</g>
+										<defs>
+											<clipPath id="clip0_4001_17">
+												<rect width="24" height="24" fill="white" />
+											</clipPath>
+										</defs>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Similar Services -->
+				<section class="pt-11 pb-26.5 md:pt-0">
+					<div class="container">
+						<div class="grid gap-7.5 md:grid-cols-2">
+							<div class="space-y-3">
+								<h4 class="text-secondary-brand-gray">Services</h4>
+								<a
+									href="#"
+									class="text-secondary-dark hover:text-primary-red text-[32px] leading-tight font-black tracking-[0.5px] wrap-break-word transition-colors"
+								>
+									Content for Inflight Entertainment (IFEC)
+								</a>
+							</div>
+
+							<div class="space-y-3">
+								<h4 class="text-secondary-brand-gray">Services</h4>
+								<a
+									href="#"
+									class="text-secondary-dark hover:text-primary-red text-[32px] leading-tight font-black tracking-[0.5px] wrap-break-word transition-colors"
+								>
+									Digital & Print Magazines
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<!-- Footer -->
+			<footer class="bg-primary-red-dark py-17.5">
+				<div class="container">
+					<!-- Menu -->
+					<div
+						class="flex flex-col gap-8 md:max-w-187.5 md:flex-row md:justify-between"
+					>
+						<div class="grid space-y-4">
+							<a href="#">
+								<img src="./images/global/logo-white.svg" alt="white logo" />
+							</a>
+
+							<nav>
+								<ul>
+									<li>
+										<a
+											href="#"
+											class="text-sm leading-loose text-white hover:text-white/80"
+										>
+											Scan Client Publishing
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+
+						<nav>
+							<ul>
+								<li>
+									<a
+										href="#"
+										class="text-base leading-loose text-white hover:text-white/80"
+									>
+										News Building
+									</a>
+								</li>
+								<li>
+									<a
+										href="#"
+										class="text-base leading-loose text-white hover:text-white/80"
+									>
+										3 London Bridge Street
+									</a>
+								</li>
+								<li>
+									<a
+										href="#"
+										class="text-base leading-loose text-white hover:text-white/80"
+									>
+										London SE1 9SG
+									</a>
+								</li>
+								<li>
+									<a
+										href="#"
+										class="text-base leading-loose text-white hover:text-white/80"
+									>
+										United Kingdom
+									</a>
+								</li>
+							</ul>
+						</nav>
+
+						<nav>
+							<ul>
+								<li class="mb-4">
+									<a
+										href="#"
+										target="_blank"
+										class="flex items-center gap-1.5 text-base leading-loose text-white hover:text-white/80"
+									>
+										<img
+											src="./images/icons/linkedin.svg"
+											alt="linkedin icon"
+										/>
+										LinkedIn
+									</a>
+								</li>
+								<li>
+									<a
+										href="tel:+442039504367"
+										class="flex items-center gap-1.5 text-base leading-loose text-white hover:text-white/80"
+									>
+										<img src="./images/icons/phone.svg" alt="linkedin icon" />
+										+44 20 3950 4367
+									</a>
+								</li>
+								<li>
+									<a
+										href="#"
+										class="flex items-center gap-1.5 text-base leading-loose text-white hover:text-white/80"
+									>
+										<img src="./images/icons/lock.svg" alt="linkedin icon" />
+										+44 870 933 0421 (fax)
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+					<!-- Copyright & Policy -->
+					<div class="mt-9 flex flex-col items-center gap-4">
+						<a
+							href="#"
+							class="text-base leading-loose text-white hover:text-white/80"
+						>
+							Privacy Policy
+						</a>
+						<p class="text-base leading-loose text-white">
+							© 2008 - 2026 Scan Client Publishing
+						</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<!-- Libs -->
+
+		<!-- Custom JS -->
+		<script src="./js/main.js"></script>
+	</body>
+</html>

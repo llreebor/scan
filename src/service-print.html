@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en" class="h-full">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Service | Digital & Print Magazines</title>
+		<!-- Main CSS File -->
+		<link rel="stylesheet" href="./css/output.css" />
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="relative h-full bg-white">
+		<div class="wrapper flex min-h-full flex-col">
+			<!-- Header & Hero -->
+			<div class="with-image-bg bg-primary-red">
+				<!-- Header -->
+				<header class="py-5">
+					<div class="container mx-auto">
+						<div
+							class="flex flex-wrap items-center justify-between md:flex-nowrap"
+						>
+							<!-- Logo -->
+							<a href="#">
+								<img src="./images/global/logo.svg" alt="logo image" />
+							</a>
+
+							<!-- Lang Select -->
+							<div class="z-20 flex items-center gap-1.5 md:order-3">
+								<!-- Icon -->
+								<img src="./images/icons/lang.svg" alt="language icon" />
+
+								<!-- Select -->
+								<div class="select-group group/select relative z-0">
+									<!-- Hidden input for form submission -->
+									<input type="hidden" name="year" class="selected-value" />
+
+									<!-- Trigger button -->
+									<button
+										type="button"
+										class="select-trigger"
+										aria-haspopup="listbox"
+										aria-expanded="false"
+									>
+										<span class="selected-option"></span>
+
+										<svg
+											class="select-icon"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<g clip-path="url(#clip0_4001_1207)">
+												<path
+													d="M11.5312 16.8574L5.67188 10.998C5.37891 10.7344 5.37891 10.2949 5.67188 10.002C5.93555 9.73828 6.375 9.73828 6.66797 10.002L12.0293 15.3633L17.3906 10.002C17.6543 9.73828 18.0938 9.73828 18.3574 10.002C18.6504 10.2656 18.6504 10.7344 18.3574 10.998L12.498 16.8574C12.2344 17.1211 11.7949 17.1211 11.5312 16.8574Z"
+													fill="white"
+													class="fill-current"
+												/>
+											</g>
+											<defs>
+												<clipPath id="clip0_4001_1207">
+													<rect width="24" height="24" fill="white" />
+												</clipPath>
+											</defs>
+										</svg>
+									</button>
+
+									<!-- Options list -->
+									<ul class="select-options" role="listbox">
+										<li role="option">
+											<button type="button" class="select-option">
+												English
+											</button>
+										</li>
+										<li role="option">
+											<button type="button" class="select-option">
+												Français
+											</button>
+										</li>
+										<li role="option">
+											<button type="button" class="select-option">
+												Español
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- Desktop menu -->
+							<nav
+								id="menu"
+								role="navigation"
+								aria-label="Main menu"
+								class="menu z-10 mt-4 flex w-full md:order-2 md:mt-0 md:mr-10 md:ml-auto md:w-auto lg:mr-13.5"
+							>
+								<ul
+									class="flex w-full items-center justify-between gap-5.5 sm:gap-10 lg:gap-13.5"
+								>
+									<li class="menu-item hidden sm:flex">
+										<a href="#" class="menu-link">Home</a>
+									</li>
+									<li class="menu-item">
+										<a href="#" class="menu-link">Services</a>
+									</li>
+									<li class="menu-item">
+										<a href="#" class="menu-link">Cases</a>
+									</li>
+									<!-- Menu Item With Submenu -->
+									<li class="menu-item group/submenu submenu-trigger relative">
+										<button
+											class="menu-link"
+											aria-haspopup="true"
+											aria-expanded="false"
+										>
+											<span>About us</span>
+											<svg
+												aria-hidden="true"
+												class="shrink-0 transition-transform group-hover/submenu:rotate-180"
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<g clip-path="url(#clip0_4001_1207)">
+													<path
+														d="M11.5312 16.8574L5.67188 10.998C5.37891 10.7344 5.37891 10.2949 5.67188 10.002C5.93555 9.73828 6.375 9.73828 6.66797 10.002L12.0293 15.3633L17.3906 10.002C17.6543 9.73828 18.0938 9.73828 18.3574 10.002C18.6504 10.2656 18.6504 10.7344 18.3574 10.998L12.498 16.8574C12.2344 17.1211 11.7949 17.1211 11.5312 16.8574Z"
+														fill="white"
+														class="fill-current"
+													/>
+												</g>
+												<defs>
+													<clipPath id="clip0_4001_1207">
+														<rect width="24" height="24" fill="white" />
+													</clipPath>
+												</defs>
+											</svg>
+										</button>
+										<!-- Submenu -->
+										<ul class="submenu" aria-label="More submenu">
+											<li><a class="submenu-link" href="#">About us</a></li>
+											<li><a class="submenu-link" href="#">Jobs</a></li>
+										</ul>
+									</li>
+									<li class="menu-item">
+										<a href="#" class="menu-link">Contact</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</header>
+
+				<!-- Hero -->
+				<section class="py-21.5 md:py-30">
+					<div class="container">
+						<h3 class="text-secondary-gray">Services</h3>
+						<h1 class="mt-6">Digital & Print Magazines</h1>
+						<p class="mt-10.5 max-w-216.25 text-xl leading-relaxed text-white">
+							Some say magazines are a thing of the past. As a publisher with
+							more than a decade’s worth of experience of publishing quality
+							magazines with continuously growing readerships, Scan Client
+							Publishing knows better. Those in need of marketing, which is
+							every single brand out there, should be paying attention, too.
+							Read on to find out why your business needs its very own, branded
+							magazine.
+						</p>
+					</div>
+				</section>
+			</div>
+
+			<!-- Main Content -->
+			<main class="flex-auto">
+				<!-- Services -->
+				<section class="pt-21">
+					<div class="container">
+						<!-- Service Grid -->
+						<div class="mt-11 space-y-21 md:mt-14.5 md:space-y-29">
+							<!-- Service Item -->
+							<div
+								class="flex w-full flex-col gap-10.5 md:flex-row md:items-center lg:gap-12"
+							>
+								<div class="md:max-w-100 md:shrink-0 lg:max-w-161.5">
+									<h3 class="text-secondary-dark-gray">The power of</h3>
+									<h3 class="mt-1.5 text-[42px] md:text-[46px]">
+										Visual storytelling
+									</h3>
+									<p class="mt-5 text-base leading-relaxed">
+										In the digital era, we are used to thinking of websites as
+										the be-all and end-all of informative marketing, and it’s
+										true that a well-designed website can be hugely powerful.
+										But when it comes to the intricacies of visual storytelling
+										and design, there’s a lot to be said for a carefully
+										laid-out magazine, complete with stunning, high-resolution
+										photographs, graphic elements, and attention-grabbing
+										typography. When you take the reader with you on the journey
+										of your brand, from the cover of your magazine through
+										well-crafted features and until the very end, it has the
+										potential to make an impression that no website will ever
+										come close to.
+									</p>
+								</div>
+
+								<div class="h-full w-full">
+									<img
+										class="h-auto w-full max-w-full object-cover"
+										src="./images/services/service-print-1.png"
+										alt="service image"
+									/>
+								</div>
+							</div>
+
+							<!-- Service Item Reverse -->
+							<div
+								class="flex w-full flex-col gap-10.5 md:flex-row-reverse md:items-center lg:gap-12"
+							>
+								<div class="md:max-w-100 md:shrink-0 lg:max-w-161.5">
+									<h3 class="text-secondary-dark-gray">The power of</h3>
+									<h3 class="mt-1.5 text-[42px] md:text-[46px]">Touch</h3>
+									<p class="mt-5 text-base leading-relaxed">
+										Something happens when you get a physical magazine in your
+										hands: the smell and feel of the paper, the way the images
+										move as you flick the pages over. Somehow, time seems to
+										stand still and the world around you fades away as you
+										engage with the story behind the magazine. Social media has
+										contributed to the shortened attention span of readers, and
+										especially so on websites with status updates surrounded by
+										advertising and calls to action, but a magazine is an
+										invitation to return for a moment to quality reading and
+										undivided attention to what’s in front of you. It’s a moment
+										you share with your customers.
+									</p>
+								</div>
+
+								<div class="h-full w-full">
+									<img
+										class="h-auto w-full max-w-full object-cover"
+										src="./images/services/service-print-2.png"
+										alt="service image"
+									/>
+								</div>
+							</div>
+
+							<!-- Service Item -->
+							<div
+								class="flex w-full flex-col gap-10.5 md:flex-row md:items-center lg:gap-12"
+							>
+								<div class="md:max-w-100 md:shrink-0 lg:max-w-161.5">
+									<h3 class="text-secondary-dark-gray">The power of</h3>
+									<h3 class="mt-1.5 text-[42px] md:text-[46px]">
+										Long-form journalism
+									</h3>
+									<p class="mt-5 text-base leading-relaxed">
+										The media industry may be changing, but the art of
+										storytelling remains. The ability of a skilled writer to
+										engage the reader, pique their curiosity, make them laugh
+										and share a special moment with them has gone nowhere, and
+										never is that impact as powerful as when the reader takes
+										the time to engage through multiple paragraphs or even pages
+										of storytelling, bringing them on a journey full of
+										epiphanies and emotions. You’ll know that your brand is
+										about much more than an Instagram post. A magazine of your
+										own is your chance to share it all, in its glorious
+										complexity and full colour.
+									</p>
+								</div>
+
+								<div class="h-full w-full">
+									<img
+										class="h-auto w-full max-w-full object-cover"
+										src="./images/services/service-print-3.png"
+										alt="service image"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- CTA -->
+				<section class="pt-21 md:pt-26.5">
+					<div class="container">
+						<div
+							class="bg-primary-red-dark relative space-y-4 overflow-hidden px-7.5 py-10.5 lg:px-10 xl:px-17.5"
+						>
+							<!-- Content -->
+							<div>
+								<h2 class="text-white max-md:text-[39px]">Get in contact</h2>
+								<p class="text-lg leading-[1.75] text-white">
+									Contact our digital & print magazine experts today to take the
+									next steps towards publishing your magazine
+								</p>
+								<a href="#" class="btn btn-primary mt-5 md:mt-6.5">
+									Contact Us
+									<svg
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<g clip-path="url(#clip0_4001_17)">
+											<path
+												d="M19.7812 12.5312L14.5312 17.7812C14.25 18.0625 13.7812 18.0625 13.4688 17.7812C13.1875 17.5 13.1875 17 13.4688 16.7188L17.4375 12.75H4.75C4.34375 12.75 4 12.4062 4 12C4 11.5938 4.34375 11.25 4.75 11.25H17.4375L13.4688 7.28125C13.1875 7 13.1875 6.5 13.4688 6.21875C13.75 5.9375 14.25 5.9375 14.5312 6.21875L19.7812 11.4688C20.0625 11.75 20.0625 12.25 19.7812 12.5312Z"
+												class="fill-current"
+											/>
+										</g>
+										<defs>
+											<clipPath id="clip0_4001_17">
+												<rect width="24" height="24" fill="white" />
+											</clipPath>
+										</defs>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Services -->
+				<section>
+					<div class="container">
+						<!-- Service Grid -->
+						<div class="mt-11 space-y-7.5 md:mt-14.5">
+							<!-- Service Item Reverse -->
+							<div
+								class="bg-secondary-light flex w-full flex-col gap-10.5 p-7.5 md:flex-row-reverse md:items-center lg:gap-12"
+							>
+								<div class="md:max-w-100 md:shrink-0 lg:max-w-148.5">
+									<h3 class="text-[42px] md:text-[46px]">
+										Quality over quantity
+									</h3>
+									<p class="mt-5 text-base leading-relaxed">
+										What can you get on the web for the price of a branded
+										magazine, say in the form of promoted posts on social media
+										or mass-produced SEO articles? If you think in terms of
+										volume, producing a magazine can seem costly. Think instead
+										of impact, and it will quickly start to make sense. Research
+										has shown that the way in which we engage with web content
+										is most often rushed and distracted – the impact isn’t
+										always lasting or even significant. A magazine provides a
+										stress-free, leisurely read, and the good news is that your
+										investment will continue to bear fruit as you digitalise
+										your magazine, extract the quality features, share them
+										through your social media channels and watch your brand
+										flourish.
+									</p>
+								</div>
+
+								<div class="h-full w-full">
+									<img
+										class="h-auto w-full max-w-full object-cover"
+										src="./images/services/service-print-4.png"
+										alt="service image"
+									/>
+								</div>
+							</div>
+							<!-- Service Item  -->
+							<div
+								class="bg-secondary-light flex w-full flex-col gap-10.5 p-7.5 md:flex-row md:items-center lg:gap-12"
+							>
+								<div class="md:max-w-100 md:shrink-0 lg:max-w-148.5">
+									<h3 class="text-[42px] md:text-[46px]">
+										Showcase trusted expertise
+									</h3>
+									<p class="mt-5 text-base leading-relaxed">
+										As with any form of marketing, a magazine provides the space
+										for you to showcase your expertise and tell your audience
+										why and how you know what you’re talking about. It’s by
+										showing that you’re genuine that you get people to trust
+										you. Add to this the fact that the experience of a magazine
+										comes with a weightiness and trustworthiness that’s very
+										hard to come by in the online world, and you’ll see why
+										waxing lyrical about all those things you’ve learnt and are
+										passionate about makes a lot more sense in a sophisticated
+										magazine than on, say, Twitter.
+									</p>
+								</div>
+
+								<div class="h-full w-full">
+									<img
+										class="h-auto w-full max-w-full object-cover"
+										src="./images/services/service-print-5.png"
+										alt="service image"
+									/>
+								</div>
+							</div>
+							<!-- Service Item Reverse -->
+							<div
+								class="bg-secondary-light flex w-full flex-col gap-10.5 p-7.5 md:flex-row-reverse md:items-center lg:gap-12"
+							>
+								<div class="md:max-w-100 md:shrink-0 lg:max-w-148.5">
+									<h3 class="text-[42px] md:text-[46px]">
+										An exclusive ‘wow’ effect
+									</h3>
+									<p class="mt-5 text-base leading-relaxed">
+										Whether or not your brand aims to be exclusive, the ‘wow’
+										effect that comes with a branded magazine is one that makes
+										your customer feel special in a way a blog never will.
+										Perhaps you’ll choose to use it instead of a traditional
+										catalogue, as part of an integrated marketing campaign, or
+										perhaps you’ll post it out to your trusted regulars only. In
+										any case, the potential to go digital with a beautifully
+										designed print product you’ve been in control of is a
+										two-for-the-price-of-one opportunity that will pay off for a
+										very long time. In this day and age, everyone has a website
+										– but not everyone has a magazine. Perhaps this is your way
+										to reach above and beyond, to show you mean business.
+									</p>
+								</div>
+
+								<div class="h-full w-full">
+									<img
+										class="h-auto w-full max-w-full object-cover"
+										src="./images/services/service-print-6.png"
+										alt="service image"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- CTA -->
+				<section class="pt-21 pb-11 md:py-26.5">
+					<div class="container">
+						<div
+							class="bg-higlights-cyan-dark relative space-y-4 overflow-hidden px-7.5 py-10.5 lg:px-10 xl:px-17.5"
+						>
+							<!-- Content -->
+							<div class="max-w-216.25">
+								<h2 class="text-white max-md:text-[39px]">Ready to Create?</h2>
+								<p class="text-lg leading-[1.75] text-white">
+									Our content marketing experts can tailor the right content for
+									your campaign and audience, get in contact now to book your
+									free consultation
+								</p>
+								<a href="#" class="btn btn-primary mt-5 md:mt-6.5">
+									Book Your Free Consultation
+									<svg
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<g clip-path="url(#clip0_4001_17)">
+											<path
+												d="M19.7812 12.5312L14.5312 17.7812C14.25 18.0625 13.7812 18.0625 13.4688 17.7812C13.1875 17.5 13.1875 17 13.4688 16.7188L17.4375 12.75H4.75C4.34375 12.75 4 12.4062 4 12C4 11.5938 4.34375 11.25 4.75 11.25H17.4375L13.4688 7.28125C13.1875 7 13.1875 6.5 13.4688 6.21875C13.75 5.9375 14.25 5.9375 14.5312 6.21875L19.7812 11.4688C20.0625 11.75 20.0625 12.25 19.7812 12.5312Z"
+												class="fill-current"
+											/>
+										</g>
+										<defs>
+											<clipPath id="clip0_4001_17">
+												<rect width="24" height="24" fill="white" />
+											</clipPath>
+										</defs>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Similar Services -->
+				<section class="pt-11 pb-26.5 md:pt-0">
+					<div class="container">
+						<div class="grid gap-7.5 md:grid-cols-2">
+							<div class="space-y-3">
+								<h4 class="text-secondary-brand-gray">Services</h4>
+								<a
+									href="#"
+									class="text-secondary-dark hover:text-primary-red text-[32px] leading-tight font-black tracking-[0.5px] wrap-break-word transition-colors"
+								>
+									Content for Inflight Entertainment (IFEC)
+								</a>
+							</div>
+
+							<div class="space-y-3">
+								<h4 class="text-secondary-brand-gray">Services</h4>
+								<a
+									href="#"
+									class="text-secondary-dark hover:text-primary-red text-[32px] leading-tight font-black tracking-[0.5px] wrap-break-word transition-colors"
+								>
+									e-Books
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<!-- Footer -->
+			<footer class="bg-primary-red-dark py-17.5">
+				<div class="container">
+					<!-- Menu -->
+					<div
+						class="flex flex-col gap-8 md:max-w-187.5 md:flex-row md:justify-between"
+					>
+						<div class="grid space-y-4">
+							<a href="#">
+								<img src="./images/global/logo-white.svg" alt="white logo" />
+							</a>
+
+							<nav>
+								<ul>
+									<li>
+										<a
+											href="#"
+											class="text-sm leading-loose text-white hover:text-white/80"
+										>
+											Scan Client Publishing
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+
+						<nav>
+							<ul>
+								<li>
+									<a
+										href="#"
+										class="text-base leading-loose text-white hover:text-white/80"
+									>
+										News Building
+									</a>
+								</li>
+								<li>
+									<a
+										href="#"
+										class="text-base leading-loose text-white hover:text-white/80"
+									>
+										3 London Bridge Street
+									</a>
+								</li>
+								<li>
+									<a
+										href="#"
+										class="text-base leading-loose text-white hover:text-white/80"
+									>
+										London SE1 9SG
+									</a>
+								</li>
+								<li>
+									<a
+										href="#"
+										class="text-base leading-loose text-white hover:text-white/80"
+									>
+										United Kingdom
+									</a>
+								</li>
+							</ul>
+						</nav>
+
+						<nav>
+							<ul>
+								<li class="mb-4">
+									<a
+										href="#"
+										target="_blank"
+										class="flex items-center gap-1.5 text-base leading-loose text-white hover:text-white/80"
+									>
+										<img
+											src="./images/icons/linkedin.svg"
+											alt="linkedin icon"
+										/>
+										LinkedIn
+									</a>
+								</li>
+								<li>
+									<a
+										href="tel:+442039504367"
+										class="flex items-center gap-1.5 text-base leading-loose text-white hover:text-white/80"
+									>
+										<img src="./images/icons/phone.svg" alt="linkedin icon" />
+										+44 20 3950 4367
+									</a>
+								</li>
+								<li>
+									<a
+										href="#"
+										class="flex items-center gap-1.5 text-base leading-loose text-white hover:text-white/80"
+									>
+										<img src="./images/icons/lock.svg" alt="linkedin icon" />
+										+44 870 933 0421 (fax)
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+					<!-- Copyright & Policy -->
+					<div class="mt-9 flex flex-col items-center gap-4">
+						<a
+							href="#"
+							class="text-base leading-loose text-white hover:text-white/80"
+						>
+							Privacy Policy
+						</a>
+						<p class="text-base leading-loose text-white">
+							© 2008 - 2026 Scan Client Publishing
+						</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<!-- Libs -->
+
+		<!-- Custom JS -->
+		<script src="./js/main.js"></script>
+	</body>
+</html>
