@@ -73,6 +73,12 @@
 	.submenu {
 		@apply bg-primary-red/90 invisible absolute top-full right-0 min-w-55 scale-95 overflow-hidden rounded-lg opacity-0 transition-all group-hover/submenu:visible group-hover/submenu:grid group-hover/submenu:scale-100 group-hover/submenu:opacity-100;
 	}
+	.submenu-trigger.is-open .submenu {
+		@apply visible grid scale-100 opacity-100;
+	}
+	.submenu-trigger.is-open svg {
+		@apply rotate-180;
+	}
 	.submenu-link {
 		@apply hover:bg-primary-red-dark flex items-end justify-end bg-[#7a0a16] p-3 text-right text-sm font-medium text-white sm:text-base md:p-4;
 	}

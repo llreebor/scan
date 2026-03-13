@@ -1,98 +1,42 @@
-// Initialize mobile menu and submenu functionality
-function initializeMobileMenu() {
-	// Select main DOM elements for mobile menu
-	const menu = document.querySelector("#mobile-menu")
-	const overlay = document.querySelector("#mobile-menu-overlay")
-	const burger = document.querySelector("#burger")
-	const body = document.querySelector("body")
+// Initialize submenu toggle functionality for both desktop and mobile
+function initializeSubmenu() {
+	const triggers = document.querySelectorAll(".submenu-trigger")
 
-	// Define mobile breakpoint for responsive behavior
-	const MOBILE_BREAKPOINT = 992
+	triggers.forEach((trigger) => {
+		const btn = trigger.querySelector('[aria-haspopup="true"]')
+		if (!btn) return
 
-	// Exit if required elements are missing
-	if (!menu || !burger || !body || !overlay) return
+		btn.addEventListener("click", (e) => {
+			e.stopPropagation()
 
-	// ============================
-	// MENU TOGGLE FUNCTIONALITY
-	// ============================
+			const isOpen = trigger.classList.contains("is-open")
 
-	const updateMenuState = (isOpen) => {
-		burger.setAttribute("aria-expanded", isOpen)
-		burger.classList.toggle("active", isOpen)
+			// Close all open submenus
+			document.querySelectorAll(".submenu-trigger.is-open").forEach((el) => {
+				el.classList.remove("is-open")
+				el.querySelector('[aria-haspopup="true"]').setAttribute(
+					"aria-expanded",
+					"false",
+				)
+			})
 
-		menu.classList.toggle("is-open", isOpen)
-		menu.classList.toggle("-translate-x-full", !isOpen)
-		menu.classList.toggle("translate-x-0", isOpen)
-
-		overlay.classList.toggle("opacity-0", !isOpen)
-		overlay.classList.toggle("opacity-100", isOpen)
-		overlay.classList.toggle("pointer-events-none", !isOpen)
-		overlay.classList.toggle("pointer-events-auto", isOpen)
-
-		body.classList.toggle("overflow-hidden", isOpen)
-	}
-
-	const handleBurgerClick = () => {
-		const isOpening = !menu.classList.contains("is-open")
-		updateMenuState(isOpening)
-	}
-
-	const handleOverlayClick = (event) => {
-		if (event.target === overlay) updateMenuState(false)
-	}
-
-	const handleEscapeKey = (event) => {
-		if (event.key === "Escape" && menu.classList.contains("is-open")) {
-			updateMenuState(false)
-		}
-	}
-
-	const handleWindowResize = () => {
-		if (window.innerWidth >= MOBILE_BREAKPOINT) {
-			updateMenuState(false)
-		}
-	}
-
-	// Add event listeners for main menu
-	burger.addEventListener("click", handleBurgerClick)
-	overlay.addEventListener("click", handleOverlayClick)
-	document.addEventListener("keydown", handleEscapeKey)
-	window.addEventListener("resize", handleWindowResize)
-
-	burger.setAttribute("aria-expanded", "false")
-	handleWindowResize()
-
-	// ============================
-	// SUBMENU FUNCTIONALITY
-	// ============================
-
-	// Check if there are submenu triggers at all
-	const submenuTriggersExist = menu.querySelector(".submenu-trigger")
-
-	if (submenuTriggersExist) {
-		menu.addEventListener("click", (event) => {
-			const trigger = event.target.closest(".submenu-trigger")
-			if (!trigger) return
-
-			const submenuItem = trigger.closest(".with-submenu")
-			if (submenuItem) {
-				submenuItem.classList.toggle("active")
+			// Open current submenu if it was closed
+			if (!isOpen) {
+				trigger.classList.add("is-open")
+				btn.setAttribute("aria-expanded", "true")
 			}
 		})
-	}
+	})
 
-	// ============================
-	// LINK CLICK CLOSE MENU
-	// ============================
-
-	menu.addEventListener("click", (event) => {
-		const link = event.target.closest("a")
-		if (!link) return
-
-		const href = link.getAttribute("href")
-		if (href && href !== "#") {
-			updateMenuState(false)
-		}
+	// Click outside any submenu — close all
+	document.addEventListener("click", () => {
+		document.querySelectorAll(".submenu-trigger.is-open").forEach((el) => {
+			el.classList.remove("is-open")
+			el.querySelector('[aria-haspopup="true"]').setAttribute(
+				"aria-expanded",
+				"false",
+			)
+		})
 	})
 }
 
@@ -168,8 +112,8 @@ function initializeCustomSelects() {
 
 // Inits
 document.addEventListener("DOMContentLoaded", () => {
-	// Mobile Menu
-	initializeMobileMenu()
+	// Mobile Submenu
+	initializeSubmenu()
 
 	// Lang Select
 	initializeCustomSelects()
