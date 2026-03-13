@@ -71,10 +71,10 @@
 		@apply flex shrink-0 items-center gap-1.5 py-3 text-sm font-medium text-white hover:text-white/80 sm:text-base;
 	}
 	.submenu {
-		@apply bg-primary-red invisible absolute top-full right-0 min-w-55 scale-95 overflow-hidden rounded-lg opacity-0 transition-all group-hover/submenu:visible group-hover/submenu:grid group-hover/submenu:scale-100 group-hover/submenu:opacity-100;
+		@apply bg-primary-red/90 invisible absolute top-full right-0 min-w-55 scale-95 overflow-hidden rounded-lg opacity-0 transition-all group-hover/submenu:visible group-hover/submenu:grid group-hover/submenu:scale-100 group-hover/submenu:opacity-100;
 	}
 	.submenu-link {
-		@apply bg-primary-red hover:bg-primary-red-dark flex p-3 text-sm font-medium text-white sm:text-base md:p-4;
+		@apply hover:bg-primary-red-dark flex items-end justify-end bg-[#7a0a16] p-3 text-right text-sm font-medium text-white sm:text-base md:p-4;
 	}
 
 	/* Select */
@@ -91,10 +91,10 @@
 		@apply transition-transform group-[.active]/select:rotate-180;
 	}
 	.select-options {
-		@apply bg-primary-red absolute top-full right-0 z-10 mt-2 hidden w-full min-w-26 transform overflow-hidden rounded-md border-none transition-all group-[.active]/select:block;
+		@apply bg-primary-red-dark/60 absolute top-full right-0 z-10 mt-2 hidden w-full min-w-26 transform overflow-hidden rounded-md border-none transition-all group-[.active]/select:block;
 	}
 	.select-option {
-		@apply bg-primary-red hover:bg-primary-red-dark z-10 flex w-full p-3 text-sm font-medium text-white sm:text-base md:p-4;
+		@apply hover:bg-primary-red-dark z-10 flex w-full bg-[#7a0a16] p-3 text-sm font-medium text-white sm:text-base md:p-4;
 	}
 }
 
