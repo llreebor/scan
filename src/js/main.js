@@ -44,6 +44,8 @@ function initializeSubmenu() {
 function initializeCustomSelects() {
 	const selects = document.querySelectorAll(".select-group")
 
+	if (selects.length < 0) return
+
 	selects.forEach((select) => {
 		const trigger = select.querySelector(".select-trigger")
 		const display = select.querySelector(".selected-option")
@@ -117,4 +119,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Lang Select
 	initializeCustomSelects()
+
+	// Case B page | eBooks Slider
+	if (document.querySelector(".swiper-ebooks")) {
+		new Swiper(".swiper-ebooks", {
+			// Options
+			spaceBetween: 40,
+			// Responsive breakpoints
+			breakpoints: {
+				320: {
+					slidesPerView: 1.7,
+				},
+				640: {
+					slidesPerView: 2.8,
+				},
+				768: {
+					slidesPerView: 3.2,
+				},
+				1024: {
+					slidesPerView: 5,
+				},
+			},
+		})
+	}
 })
