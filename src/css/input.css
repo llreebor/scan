@@ -136,16 +136,16 @@
 		@apply text-secondary-dark font-workSans;
 	}
 	h1 {
-		@apply text-[54px] leading-normal font-black tracking-[1px] wrap-break-word text-white;
+		@apply text-[54px] leading-[1.3] font-black tracking-[1px] wrap-break-word text-white;
 	}
 	h2 {
-		@apply text-secondary-dark text-[46px] leading-normal font-black tracking-[0.5px] wrap-break-word;
+		@apply text-secondary-dark text-[46px] leading-[1.3] font-black tracking-[0.5px] wrap-break-word;
 	}
 	h3 {
 		@apply text-secondary-dark text-[32px] leading-tight font-black tracking-[0.5px] wrap-break-word;
 	}
 	h4 {
-		@apply text-secondary-dark text-2xl leading-normal font-black tracking-[0.5px] wrap-break-word;
+		@apply text-secondary-dark text-2xl leading-[1.2] font-black tracking-[0.5px] wrap-break-word;
 	}
 }
 
