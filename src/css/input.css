@@ -26,9 +26,6 @@
 	/* Gradients */
 	--color-gradient-primary-red: 180deg, #ab2430 0%, #ab243000 100%;
 
-	/* Shadows */
-	--shadow-input: 0 0 0 2px #fff;
-
 	/* Animations */
 	--animate-fadeIn: fadeIn 0.3s linear;
 
@@ -114,7 +111,7 @@
 		@apply order-1 mb-2 block text-base font-medium text-white group-[.error]:text-red-300 group-[.success]:text-green-600;
 	}
 	.input-field {
-		@apply focus:shadow-input text-secondary-dark order-2 w-full rounded-lg border-2 border-white bg-white/40 px-4 py-2 text-base transition outline-none not-placeholder-shown:bg-white group-[.error]:border-red-300 group-[.success]:border-green-600 hover:border-white/80 focus:border-black/20 focus:bg-white disabled:cursor-not-allowed disabled:opacity-50;
+		@apply text-secondary-dark order-2 w-full rounded-lg border-2 border-white bg-white/40 px-4 py-2 text-base transition outline-none not-placeholder-shown:bg-white group-[.error]:border-red-300 group-[.success]:border-green-600 hover:border-white/80 focus:border-black/20 focus:bg-white disabled:cursor-not-allowed disabled:opacity-50;
 	}
 	.input-error-message {
 		@apply order-3 mt-1 hidden text-xs text-red-300 group-[.error]:block;
