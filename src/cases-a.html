@@ -14,6 +14,12 @@
 			href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet"
 		/>
+
+		<!-- Swiper -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+		/>
 	</head>
 	<body class="relative h-full bg-white">
 		<div class="wrapper flex min-h-full flex-col">
@@ -358,265 +364,290 @@
 				<!-- Content -->
 				<section class="pb-14.5">
 					<div class="container">
-						<!-- Tab Buttons -->
-						<div class="flex flex-wrap gap-6">
-							<!-- Add .active class to highlights -->
-							<button
-								class="active text-primary-red hover:text-primary-red-dark text-base leading-[1.7] font-semibold underline-offset-4 transition-colors [.active]:underline"
-							>
-								All
-							</button>
-							<button
-								class="text-primary-red hover:text-primary-red-dark text-base leading-[1.7] font-semibold underline-offset-4 transition-colors [.active]:underline"
-							>
-								Magazines
-							</button>
-							<button
-								class="text-primary-red hover:text-primary-red-dark text-base leading-[1.7] font-semibold underline-offset-4 transition-colors [.active]:underline"
-							>
-								Client Magazines
-							</button>
-							<button
-								class="text-primary-red hover:text-primary-red-dark text-base leading-[1.7] font-semibold underline-offset-4 transition-colors [.active]:underline"
-							>
-								e-Books
-							</button>
-							<button
-								class="text-primary-red hover:text-primary-red-dark text-base leading-[1.7] font-semibold underline-offset-4 transition-colors [.active]:underline"
-							>
-								Books
-							</button>
-							<button
-								class="text-primary-red hover:text-primary-red-dark text-base leading-[1.7] font-semibold underline-offset-4 transition-colors [.active]:underline"
-							>
-								Video Production
-							</button>
-						</div>
+						<!-- Filters -->
+						<div x-data="{filter:'all'}">
+							<!-- Tab Buttons -->
+							<div class="flex flex-wrap gap-6">
+								<!-- Add .active class to highlights -->
+								<button
+									@click="filter='all'"
+									:class="{ 'active underline': filter === 'all' }"
+									class="active text-primary-red hover:text-primary-red-dark text-base leading-[1.7] font-semibold underline-offset-4 transition-colors [.active]:underline"
+								>
+									All
+								</button>
+								<button
+									@click="filter='magazines'"
+									:class="{ 'active underline': filter === 'magazines' }"
+									class="text-primary-red hover:text-primary-red-dark text-base leading-[1.7] font-semibold underline-offset-4 transition-colors [.active]:underline"
+								>
+									Magazines
+								</button>
+								<button
+									@click="filter='client-magazines'"
+									:class="{ 'active underline': filter === 'client-magazines' }"
+									class="text-primary-red hover:text-primary-red-dark text-base leading-[1.7] font-semibold underline-offset-4 transition-colors [.active]:underline"
+								>
+									Client Magazines
+								</button>
+								<button
+									@click="filter='ebooks'"
+									:class="{ 'active underline': filter === 'ebooks' }"
+									class="text-primary-red hover:text-primary-red-dark text-base leading-[1.7] font-semibold underline-offset-4 transition-colors [.active]:underline"
+								>
+									e-Books
+								</button>
+								<button
+									@click="filter='books'"
+									:class="{ 'active underline': filter === 'books' }"
+									class="text-primary-red hover:text-primary-red-dark text-base leading-[1.7] font-semibold underline-offset-4 transition-colors [.active]:underline"
+								>
+									Books
+								</button>
+								<button
+									@click="filter='videos'"
+									:class="{ 'active underline': filter === 'videos' }"
+									class="text-primary-red hover:text-primary-red-dark text-base leading-[1.7] font-semibold underline-offset-4 transition-colors [.active]:underline"
+								>
+									Video Production
+								</button>
+							</div>
 
-						<!-- Grid -->
-						<div
-							class="mt-10.5 grid place-items-start gap-7.5 md:mt-14.5 md:grid-cols-2"
-						>
-							<!-- Item -->
-							<a
-								href="#"
-								class="bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
+							<!-- Grid -->
+							<div
+								class="mt-10.5 grid place-items-start gap-7.5 md:mt-14.5 md:grid-cols-2"
 							>
-								<div class="h-full w-full">
-									<img
-										class="h-auto w-full max-w-full"
-										src="./images/cases/cases-a-1.png"
-										alt="case image"
-									/>
-								</div>
+								<!-- Item -->
+								<a
+									x-show="filter=='all' || filter=='client-magazines'"
+									href="#"
+									class="animate-fadeIn bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
+								>
+									<div class="h-full w-full">
+										<img
+											class="h-auto w-full max-w-full"
+											src="./images/cases/cases-a-1.png"
+											alt="case image"
+										/>
+									</div>
 
-								<div class="space-y-2.5 md:space-y-3">
-									<p class="text-secondary-dark-gray text-base font-semibold">
-										Magazine
-									</p>
-									<h3 class="group-hover:text-primary-red transition-colors">
-										Scan Magazine
-									</h3>
-								</div>
-							</a>
-							<!-- Item -->
-							<a
-								href="#"
-								class="bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
-							>
-								<div class="h-full w-full">
-									<img
-										class="h-auto w-full max-w-full"
-										src="./images/cases/cases-a-2.png"
-										alt="case image"
-									/>
-								</div>
+									<div class="space-y-2.5 md:space-y-3">
+										<p class="text-secondary-dark-gray text-base font-semibold">
+											Magazine
+										</p>
+										<h3 class="group-hover:text-primary-red transition-colors">
+											Scan Magazine
+										</h3>
+									</div>
+								</a>
+								<!-- Item -->
+								<a
+									x-show="filter=='all' || filter=='ebook'"
+									href="#"
+									class="animate-fadeIn bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
+								>
+									<div class="h-full w-full">
+										<img
+											class="h-auto w-full max-w-full"
+											src="./images/cases/cases-a-2.png"
+											alt="case image"
+										/>
+									</div>
 
-								<div class="space-y-2.5 md:space-y-3">
-									<p class="text-secondary-dark-gray text-base font-semibold">
-										e-Book
-									</p>
-									<h3 class="group-hover:text-primary-red transition-colors">
-										A Weekend in Brussels
-									</h3>
-								</div>
-							</a>
-							<!-- Item -->
-							<a
-								href="#"
-								class="bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
-							>
-								<div class="h-full w-full">
-									<img
-										class="h-auto w-full max-w-full"
-										src="./images/cases/cases-a-3.png"
-										alt="case image"
-									/>
-								</div>
+									<div class="space-y-2.5 md:space-y-3">
+										<p class="text-secondary-dark-gray text-base font-semibold">
+											e-Book
+										</p>
+										<h3 class="group-hover:text-primary-red transition-colors">
+											A Weekend in Brussels
+										</h3>
+									</div>
+								</a>
+								<!-- Item -->
+								<a
+									href="#"
+									x-show="filter=='all' || filter=='books'"
+									class="animate-fadeIn bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
+								>
+									<div class="h-full w-full">
+										<img
+											class="h-auto w-full max-w-full"
+											src="./images/cases/cases-a-3.png"
+											alt="case image"
+										/>
+									</div>
 
-								<div class="space-y-2.5 md:space-y-3">
-									<p class="text-secondary-dark-gray text-base font-semibold">
-										e-Book
-									</p>
-									<h3 class="group-hover:text-primary-red transition-colors">
-										A Weekend in Oslo
-									</h3>
-								</div>
-							</a>
-							<!-- Item -->
-							<a
-								href="#"
-								class="bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
-							>
-								<div class="h-full w-full">
-									<img
-										class="h-auto w-full max-w-full"
-										src="./images/cases/cases-a-4.png"
-										alt="case image"
-									/>
-								</div>
+									<div class="space-y-2.5 md:space-y-3">
+										<p class="text-secondary-dark-gray text-base font-semibold">
+											e-Book
+										</p>
+										<h3 class="group-hover:text-primary-red transition-colors">
+											A Weekend in Oslo
+										</h3>
+									</div>
+								</a>
+								<!-- Item -->
+								<a
+									href="#"
+									x-show="filter=='all' || filter=='magazines'"
+									class="animate-fadeIn bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
+								>
+									<div class="h-full w-full">
+										<img
+											class="h-auto w-full max-w-full"
+											src="./images/cases/cases-a-4.png"
+											alt="case image"
+										/>
+									</div>
 
-								<div class="space-y-2.5 md:space-y-3">
-									<p class="text-secondary-dark-gray text-base font-semibold">
-										Magazine
-									</p>
-									<h3 class="group-hover:text-primary-red transition-colors">
-										Discover Benelux
-									</h3>
-								</div>
-							</a>
-							<!-- Item -->
-							<a
-								href="#"
-								class="bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
-							>
-								<div class="h-full w-full">
-									<img
-										class="h-auto w-full max-w-full"
-										src="./images/cases/cases-a-5.png"
-										alt="case image"
-									/>
-								</div>
+									<div class="space-y-2.5 md:space-y-3">
+										<p class="text-secondary-dark-gray text-base font-semibold">
+											Magazine
+										</p>
+										<h3 class="group-hover:text-primary-red transition-colors">
+											Discover Benelux
+										</h3>
+									</div>
+								</a>
+								<!-- Item -->
+								<a
+									href="#"
+									x-show="filter=='all' || filter=='magazines'"
+									class="animate-fadeIn bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
+								>
+									<div class="h-full w-full">
+										<img
+											class="h-auto w-full max-w-full"
+											src="./images/cases/cases-a-5.png"
+											alt="case image"
+										/>
+									</div>
 
-								<div class="space-y-2.5 md:space-y-3">
-									<p class="text-secondary-dark-gray text-base font-semibold">
-										Magazine
-									</p>
-									<h3 class="group-hover:text-primary-red transition-colors">
-										Discover Germany, Switzerland and Austria
-									</h3>
-								</div>
-							</a>
-							<!-- Item -->
-							<a
-								href="#"
-								class="bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
-							>
-								<div class="h-full w-full">
-									<img
-										class="h-auto w-full max-w-full"
-										src="./images/cases/cases-a-6.png"
-										alt="case image"
-									/>
-								</div>
+									<div class="space-y-2.5 md:space-y-3">
+										<p class="text-secondary-dark-gray text-base font-semibold">
+											Magazine
+										</p>
+										<h3 class="group-hover:text-primary-red transition-colors">
+											Discover Germany, Switzerland and Austria
+										</h3>
+									</div>
+								</a>
+								<!-- Item -->
+								<a
+									href="#"
+									x-show="filter=='all' || filter=='books'"
+									class="animate-fadeIn bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
+								>
+									<div class="h-full w-full">
+										<img
+											class="h-auto w-full max-w-full"
+											src="./images/cases/cases-a-6.png"
+											alt="case image"
+										/>
+									</div>
 
-								<div class="space-y-2.5 md:space-y-3">
-									<p class="text-secondary-dark-gray text-base font-semibold">
-										e-Book
-									</p>
-									<h3 class="group-hover:text-primary-red transition-colors">
-										A Weekend in Barcelona
-									</h3>
-								</div>
-							</a>
-							<!-- Item -->
-							<a
-								href="#"
-								class="bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
-							>
-								<div class="h-full w-full">
-									<img
-										class="h-auto w-full max-w-full"
-										src="./images/cases/cases-a-7.png"
-										alt="case image"
-									/>
-								</div>
+									<div class="space-y-2.5 md:space-y-3">
+										<p class="text-secondary-dark-gray text-base font-semibold">
+											e-Book
+										</p>
+										<h3 class="group-hover:text-primary-red transition-colors">
+											A Weekend in Barcelona
+										</h3>
+									</div>
+								</a>
+								<!-- Item -->
+								<a
+									href="#"
+									x-show="filter=='all' || filter=='videos'"
+									class="animate-fadeIn bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
+								>
+									<div class="h-full w-full">
+										<img
+											class="h-auto w-full max-w-full"
+											src="./images/cases/cases-a-7.png"
+											alt="case image"
+										/>
+									</div>
 
-								<div class="space-y-2.5 md:space-y-3">
-									<p class="text-secondary-dark-gray text-base font-semibold">
-										Video Production
-									</p>
-									<h3 class="group-hover:text-primary-red transition-colors">
-										Visit Kerteminde – Denmark’s beautiful garden by the sea
-									</h3>
-								</div>
-							</a>
-							<!-- Item -->
-							<a
-								href="#"
-								class="bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
-							>
-								<div class="h-full w-full">
-									<img
-										class="h-auto w-full max-w-full"
-										src="./images/cases/cases-a-8.png"
-										alt="case image"
-									/>
-								</div>
+									<div class="space-y-2.5 md:space-y-3">
+										<p class="text-secondary-dark-gray text-base font-semibold">
+											Video Production
+										</p>
+										<h3 class="group-hover:text-primary-red transition-colors">
+											Visit Kerteminde – Denmark’s beautiful garden by the sea
+										</h3>
+									</div>
+								</a>
+								<!-- Item -->
+								<a
+									href="#"
+									x-show="filter=='all' || filter=='videos'"
+									class="animate-fadeIn bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
+								>
+									<div class="h-full w-full">
+										<img
+											class="h-auto w-full max-w-full"
+											src="./images/cases/cases-a-8.png"
+											alt="case image"
+										/>
+									</div>
 
-								<div class="space-y-2.5 md:space-y-3">
-									<p class="text-secondary-dark-gray text-base font-semibold">
-										Video Production
-									</p>
-									<h3 class="group-hover:text-primary-red transition-colors">
-										Barcelona: What to do in Barcelona in 2020
-									</h3>
-								</div>
-							</a>
-							<!-- Item -->
-							<a
-								href="#"
-								class="bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
-							>
-								<div class="h-full w-full">
-									<img
-										class="h-auto w-full max-w-full"
-										src="./images/cases/cases-a-9.png"
-										alt="case image"
-									/>
-								</div>
+									<div class="space-y-2.5 md:space-y-3">
+										<p class="text-secondary-dark-gray text-base font-semibold">
+											Video Production
+										</p>
+										<h3 class="group-hover:text-primary-red transition-colors">
+											Barcelona: What to do in Barcelona in 2020
+										</h3>
+									</div>
+								</a>
+								<!-- Item -->
+								<a
+									href="#"
+									x-show="filter=='all' || filter=='ebooks'"
+									class="animate-fadeIn bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
+								>
+									<div class="h-full w-full">
+										<img
+											class="h-auto w-full max-w-full"
+											src="./images/cases/cases-a-9.png"
+											alt="case image"
+										/>
+									</div>
 
-								<div class="space-y-2.5 md:space-y-3">
-									<p class="text-secondary-dark-gray text-base font-semibold">
-										e-Book
-									</p>
-									<h3 class="group-hover:text-primary-red transition-colors">
-										A Weekend in Oslo
-									</h3>
-								</div>
-							</a>
-							<!-- Item -->
-							<a
-								href="#"
-								class="bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
-							>
-								<div class="h-full w-full">
-									<img
-										class="h-auto w-full max-w-full"
-										src="./images/cases/cases-a-10.png"
-										alt="case image"
-									/>
-								</div>
+									<div class="space-y-2.5 md:space-y-3">
+										<p class="text-secondary-dark-gray text-base font-semibold">
+											e-Book
+										</p>
+										<h3 class="group-hover:text-primary-red transition-colors">
+											A Weekend in Oslo
+										</h3>
+									</div>
+								</a>
+								<!-- Item -->
+								<a
+									href="#"
+									x-show="filter=='all' || filter=='client-magazines'"
+									class="animate-fadeIn bg-secondary-light group flex w-full flex-col gap-5 p-7.5 md:gap-7.5 md:p-10"
+								>
+									<div class="h-full w-full">
+										<img
+											class="h-auto w-full max-w-full"
+											src="./images/cases/cases-a-10.png"
+											alt="case image"
+										/>
+									</div>
 
-								<div class="space-y-2.5 md:space-y-3">
-									<p class="text-secondary-dark-gray text-base font-semibold">
-										Magazine
-									</p>
-									<h3 class="group-hover:text-primary-red transition-colors">
-										Discover Benelux
-									</h3>
-								</div>
-							</a>
+									<div class="space-y-2.5 md:space-y-3">
+										<p class="text-secondary-dark-gray text-base font-semibold">
+											Magazine
+										</p>
+										<h3 class="group-hover:text-primary-red transition-colors">
+											Discover Benelux
+										</h3>
+									</div>
+								</a>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -706,6 +737,11 @@
 		</div>
 
 		<!-- Libs -->
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
 		<!-- Custom JS -->
 		<script src="./js/main.js"></script>
