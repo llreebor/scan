@@ -127,7 +127,7 @@
 		@apply font-workSans font-normal;
 	}
 	a {
-		@apply transition-colors;
+		@apply cursor-pointer transition-colors;
 	}
 	button {
 		@apply cursor-pointer transition-colors disabled:cursor-not-allowed;
