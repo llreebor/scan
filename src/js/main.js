@@ -143,5 +143,5 @@ document.addEventListener("DOMContentLoaded", () => {
 		})
 	}
 	// Fix Safari active state
-	document.addEventListener("touchstart", function () {}, { passive: true })
+	// document.addEventListener("touchstart", function () {}, { passive: true })
 })
