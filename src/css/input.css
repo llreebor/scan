@@ -54,19 +54,19 @@
 		@apply inline-flex items-center gap-1.5 rounded-lg border-2 border-transparent transition-colors disabled:cursor-not-allowed disabled:opacity-85;
 	}
 	.btn-primary {
-		@apply not-disabled:hover:bg-higlights-blue text-secondary-dark bg-white px-4 py-3 font-semibold not-disabled:hover:text-white active:text-white not-disabled:active:border-white;
+		@apply hover:bg-higlights-blue active:bg-higlights-blue text-secondary-dark bg-white px-4 py-3 font-semibold hover:text-white active:border-white active:text-white;
 	}
 	.btn-outline {
-		@apply not-disabled:hover:bg-secondary-dark text-secondary-dark border-secondary-dark bg-transparent px-4 py-3 font-semibold not-disabled:hover:text-white active:text-white not-disabled:active:border-white;
+		@apply hover:bg-secondary-dark active:bg-higlights-blue text-secondary-dark border-secondary-dark bg-transparent px-4 py-3 font-semibold hover:text-white active:border-white active:text-white;
 	}
 	.btn-outline-blue {
-		@apply not-disabled:hover:bg-higlights-blue text-higlights-blue border-higlights-blue bg-transparent px-4 py-3 font-semibold not-disabled:hover:text-white active:text-white not-disabled:active:border-white;
+		@apply hover:bg-higlights-blue active:bg-higlights-blue text-higlights-blue border-higlights-blue bg-transparent px-4 py-3 font-semibold hover:text-white active:border-white active:text-white;
 	}
 	.btn-link-red {
-		@apply after:bg-primary-red text-primary-red not-disabled:hover:after:text-primary-red relative border-none bg-transparent px-0 py-1 font-semibold after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:scale-0 after:transition-transform not-disabled:hover:after:scale-100 active:after:scale-100;
+		@apply after:bg-primary-red text-primary-red hover:after:text-primary-red relative border-none bg-transparent px-0 py-1 font-semibold after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:scale-0 after:transition-transform hover:after:scale-100 active:after:scale-100;
 	}
 	.btn-link-dark {
-		@apply after:bg-higlights-blue text-higlights-blue not-disabled:hover:after:text-higlights-blue relative border-none bg-transparent px-0 py-1 font-semibold after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:scale-0 after:transition-transform not-disabled:hover:after:scale-100 active:after:scale-100;
+		@apply after:bg-higlights-blue text-higlights-blue hover:after:text-higlights-blue relative border-none bg-transparent px-0 py-1 font-semibold after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:scale-0 after:transition-transform hover:after:scale-100 active:after:scale-100;
 	}
 
 	/* Menu */
@@ -127,7 +127,7 @@
 		@apply font-workSans font-normal;
 	}
 	a {
-		@apply transition-colors;
+		@apply cursor-pointer transition-colors;
 	}
 	button {
 		@apply cursor-pointer transition-colors disabled:cursor-not-allowed;
