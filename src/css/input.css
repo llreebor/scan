@@ -156,3 +156,13 @@
 		@apply absolute inset-0 -z-10 h-full w-full max-w-full object-cover;
 	}
 }
+
+/* Player */
+.vp-center {
+	justify-content: start !important;
+	align-items: start !important;
+}
+.player {
+	background: red;
+	height: 100px !important;
+}
