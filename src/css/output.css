@@ -1499,7 +1499,6 @@
     top: 100%;
     right: calc(var(--spacing) * 0);
     z-index: 20;
-    min-width: calc(var(--spacing) * 55);
     --tw-scale-x: 95%;
     --tw-scale-y: 95%;
     --tw-scale-z: 95%;
@@ -1520,6 +1519,7 @@
     isolation: isolate;
     will-change: transform, opacity;
     transform-origin: top right;
+    min-width: 220px;
   }
   .submenu-trigger.is-open .submenu {
     pointer-events: auto;
