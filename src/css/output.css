@@ -1498,6 +1498,7 @@
     position: absolute;
     top: 100%;
     right: calc(var(--spacing) * 0);
+    display: none;
     min-width: calc(var(--spacing) * 55);
     --tw-scale-x: 95%;
     --tw-scale-y: 95%;

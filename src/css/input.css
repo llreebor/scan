@@ -71,7 +71,7 @@
 		@apply flex shrink-0 items-center gap-1.5 py-3 text-sm font-medium text-white hover:text-white/80 sm:text-base;
 	}
 	.submenu {
-		@apply bg-primary-red/90 invisible absolute top-full right-0 min-w-55 scale-95 overflow-hidden rounded-lg opacity-0 transition-all group-hover/submenu:visible group-hover/submenu:grid group-hover/submenu:scale-100 group-hover/submenu:opacity-100;
+		@apply bg-primary-red/90 invisible absolute top-full right-0 hidden min-w-55 scale-95 overflow-hidden rounded-lg opacity-0 transition-all group-hover/submenu:visible group-hover/submenu:grid group-hover/submenu:scale-100 group-hover/submenu:opacity-100;
 	}
 	.submenu-trigger.is-open .submenu {
 		@apply visible grid scale-100 opacity-100;
