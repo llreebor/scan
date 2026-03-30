@@ -107,12 +107,15 @@
 		@apply transition-transform group-[.active]/select:rotate-180;
 	}
 	.select-options {
-		@apply bg-primary-red-dark/60 absolute top-full right-0 z-10 mt-2 hidden w-full min-w-26 transform overflow-hidden rounded-md border-none transition-all group-[.active]/select:block;
+		@apply bg-primary-red-dark/60 z-10 mt-2 w-full transform overflow-hidden rounded-md border-none transition-all group-[.active]/select:block;
 		display: none;
 		position: absolute;
 		isolation: isolate;
 		will-change: transform, opacity;
 		transform-origin: top right;
+		top: 100%;
+		right: 0;
+		min-width: 104px;
 	}
 	.select-option {
 		@apply hover:bg-primary-red-dark z-10 flex w-full bg-[#7a0a16] p-3 text-sm font-medium text-white sm:text-base md:p-4;
