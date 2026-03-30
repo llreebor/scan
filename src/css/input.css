@@ -71,10 +71,10 @@
 		@apply flex shrink-0 items-center gap-1.5 py-3 text-sm font-medium text-white hover:text-white/80 sm:text-base;
 	}
 	.submenu {
-		@apply bg-primary-red/90 invisible absolute top-full right-0 hidden min-w-55 scale-95 overflow-hidden rounded-lg opacity-0 transition-all group-hover/submenu:visible group-hover/submenu:grid group-hover/submenu:scale-100 group-hover/submenu:opacity-100;
+		@apply bg-primary-red/90 /* <-- добавь это */ pointer-events-none invisible absolute top-full right-0 grid max-h-0 min-w-55 scale-95 overflow-hidden rounded-lg opacity-0 transition-all group-hover/submenu:pointer-events-auto group-hover/submenu:visible group-hover/submenu:max-h-96 group-hover/submenu:scale-100 group-hover/submenu:opacity-100; /* <-- и это */
 	}
 	.submenu-trigger.is-open .submenu {
-		@apply visible grid scale-100 opacity-100;
+		@apply pointer-events-auto visible max-h-96 scale-100 opacity-100;
 	}
 	.submenu-trigger.is-open svg {
 		@apply rotate-180;

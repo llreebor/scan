@@ -1494,11 +1494,13 @@
     }
   }
   .submenu {
+    pointer-events: none;
     visibility: hidden;
     position: absolute;
     top: 100%;
     right: calc(var(--spacing) * 0);
-    display: none;
+    display: grid;
+    max-height: calc(var(--spacing) * 0);
     min-width: calc(var(--spacing) * 55);
     --tw-scale-x: 95%;
     --tw-scale-y: 95%;
@@ -1516,12 +1518,17 @@
     transition-duration: var(--tw-duration, var(--default-transition-duration));
     &:is(:where(.group\/submenu):hover *) {
       @media (hover: hover) {
+        pointer-events: auto;
+      }
+    }
+    &:is(:where(.group\/submenu):hover *) {
+      @media (hover: hover) {
         visibility: visible;
       }
     }
     &:is(:where(.group\/submenu):hover *) {
       @media (hover: hover) {
-        display: grid;
+        max-height: calc(var(--spacing) * 96);
       }
     }
     &:is(:where(.group\/submenu):hover *) {
@@ -1539,8 +1546,9 @@
     }
   }
   .submenu-trigger.is-open .submenu {
+    pointer-events: auto;
     visibility: visible;
-    display: grid;
+    max-height: calc(var(--spacing) * 96);
     --tw-scale-x: 100%;
     --tw-scale-y: 100%;
     --tw-scale-z: 100%;
