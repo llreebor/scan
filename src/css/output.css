@@ -1496,7 +1496,6 @@
   .submenu {
     pointer-events: none;
     visibility: hidden;
-    position: absolute;
     top: 100%;
     right: calc(var(--spacing) * 0);
     z-index: 20;
@@ -1517,7 +1516,7 @@
     --tw-duration: 200ms;
     transition-duration: 200ms;
     display: none;
-    position: relative;
+    position: absolute;
     isolation: isolate;
     will-change: transform, opacity;
     transform-origin: top right;

@@ -71,9 +71,9 @@
 		@apply flex shrink-0 items-center gap-1.5 py-3 text-sm font-medium text-white hover:text-white/80 sm:text-base;
 	}
 	.submenu {
-		@apply bg-primary-red/90 pointer-events-none invisible absolute top-full right-0 z-20 min-w-55 scale-95 rounded-lg opacity-0 transition-all duration-200;
+		@apply bg-primary-red/90 pointer-events-none invisible top-full right-0 z-20 min-w-55 scale-95 rounded-lg opacity-0 transition-all duration-200;
 		display: none;
-		position: relative;
+		position: absolute;
 		isolation: isolate;
 		will-change: transform, opacity;
 		transform-origin: top right;
