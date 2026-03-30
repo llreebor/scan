@@ -1496,8 +1496,6 @@
   .submenu {
     pointer-events: none;
     visibility: hidden;
-    top: 100%;
-    right: calc(var(--spacing) * 0);
     z-index: 20;
     --tw-scale-x: 95%;
     --tw-scale-y: 95%;
@@ -1520,6 +1518,8 @@
     will-change: transform, opacity;
     transform-origin: top right;
     min-width: 220px;
+    top: 100%;
+    right: 0;
   }
   .submenu-trigger.is-open .submenu {
     pointer-events: auto;
