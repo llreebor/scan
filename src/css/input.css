@@ -80,6 +80,8 @@
 		min-width: 220px;
 		top: 100%;
 		right: 0;
+		border-radius: 6px;
+		overflow: hidden;
 	}
 	.submenu-trigger.is-open .submenu {
 		@apply pointer-events-auto visible max-h-96 scale-100 opacity-100;
@@ -106,6 +108,11 @@
 	}
 	.select-options {
 		@apply bg-primary-red-dark/60 absolute top-full right-0 z-10 mt-2 hidden w-full min-w-26 transform overflow-hidden rounded-md border-none transition-all group-[.active]/select:block;
+		display: none;
+		position: absolute;
+		isolation: isolate;
+		will-change: transform, opacity;
+		transform-origin: top right;
 	}
 	.select-option {
 		@apply hover:bg-primary-red-dark z-10 flex w-full bg-[#7a0a16] p-3 text-sm font-medium text-white sm:text-base md:p-4;
