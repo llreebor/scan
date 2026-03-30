@@ -1499,7 +1499,7 @@
     position: absolute;
     top: 100%;
     right: calc(var(--spacing) * 0);
-    display: grid;
+    display: none !important;
     max-height: calc(var(--spacing) * 0);
     min-width: calc(var(--spacing) * 55);
     --tw-scale-x: 95%;
@@ -1528,6 +1528,11 @@
     }
     &:is(:where(.group\/submenu):hover *) {
       @media (hover: hover) {
+        display: grid !important;
+      }
+    }
+    &:is(:where(.group\/submenu):hover *) {
+      @media (hover: hover) {
         max-height: calc(var(--spacing) * 96);
       }
     }
@@ -1548,6 +1553,7 @@
   .submenu-trigger.is-open .submenu {
     pointer-events: auto;
     visibility: visible;
+    display: grid !important;
     max-height: calc(var(--spacing) * 96);
     --tw-scale-x: 100%;
     --tw-scale-y: 100%;
