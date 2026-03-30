@@ -115,7 +115,7 @@ function initializeCustomSelects() {
 // Inits
 document.addEventListener("DOMContentLoaded", () => {
 	// Mobile Submenu
-	initializeSubmenu()
+	// initializeSubmenu()
 
 	// Lang Select
 	initializeCustomSelects()
