@@ -1,49 +1,74 @@
 // Initialize submenu toggle functionality for both desktop and mobile
 function initializeSubmenu() {
 	const triggers = document.querySelectorAll(".submenu-trigger")
-	const isHoverDevice = window.matchMedia("(hover: hover)").matches
 
 	triggers.forEach((trigger) => {
 		const btn = trigger.querySelector('[aria-haspopup="true"]')
-		if (!btn) return
+		const submenu = trigger.querySelector(".submenu")
+		if (!btn || !submenu) return
 
-		btn.addEventListener("click", (e) => {
-			// 👉 На desktop НЕ ломаем hover
-			if (isHoverDevice) return
-
-			e.stopPropagation()
-
-			const isOpen = trigger.classList.contains("is-open")
-
-			document.querySelectorAll(".submenu-trigger").forEach((el) => {
-				el.classList.remove("is-open")
-				el.querySelector('[aria-haspopup="true"]')?.setAttribute(
-					"aria-expanded",
-					"false",
-				)
-			})
-
-			if (!isOpen) {
+		// Hover
+		trigger.addEventListener("mouseenter", () => {
+			submenu.style.display = "grid"
+			requestAnimationFrame(() => {
 				trigger.classList.add("is-open")
 				btn.setAttribute("aria-expanded", "true")
+			})
+		})
+
+		trigger.addEventListener("mouseleave", () => {
+			trigger.classList.remove("is-open")
+			btn.setAttribute("aria-expanded", "false")
+			submenu.addEventListener(
+				"transitionend",
+				() => {
+					if (!trigger.classList.contains("is-open")) {
+						submenu.style.display = "none"
+					}
+				},
+				{ once: true },
+			)
+		})
+
+		// Click (mobile)
+		btn.addEventListener("click", (e) => {
+			e.stopPropagation()
+			const isOpen = trigger.classList.contains("is-open")
+
+			closeAll()
+
+			if (!isOpen) {
+				submenu.style.display = "grid"
+				requestAnimationFrame(() => {
+					trigger.classList.add("is-open")
+					btn.setAttribute("aria-expanded", "true")
+				})
 			}
 		})
 	})
 
-	// outside click только для mobile
-	if (!isHoverDevice) {
-		document.addEventListener("click", () => {
-			document.querySelectorAll(".submenu-trigger").forEach((el) => {
-				el.classList.remove("is-open")
-				el.querySelector('[aria-haspopup="true"]')?.setAttribute(
-					"aria-expanded",
-					"false",
-				)
-			})
+	document.addEventListener("click", closeAll)
+
+	function closeAll() {
+		document.querySelectorAll(".submenu-trigger.is-open").forEach((el) => {
+			el.classList.remove("is-open")
+			el.querySelector('[aria-haspopup="true"]').setAttribute(
+				"aria-expanded",
+				"false",
+			)
+			const submenu = el.querySelector(".submenu")
+			submenu.addEventListener(
+				"transitionend",
+				() => {
+					if (!el.classList.contains("is-open")) {
+						submenu.style.display = "none"
+					}
+				},
+				{ once: true },
+			)
 		})
 	}
 }
-
 // Initialize custom language select
 function initializeCustomSelects() {
 	const selects = document.querySelectorAll(".select-group")

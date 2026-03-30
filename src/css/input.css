@@ -72,6 +72,7 @@
 	}
 	.submenu {
 		@apply bg-primary-red/90 pointer-events-none invisible absolute top-full right-0 z-20 min-w-55 scale-95 rounded-lg opacity-0 transition-all duration-200;
+		display: none;
 	}
 	.submenu-trigger.is-open .submenu {
 		@apply pointer-events-auto visible max-h-96 scale-100 opacity-100;
@@ -165,23 +166,4 @@
 .player {
 	background: red;
 	height: 100px !important;
-}
-
-/* Hover (ТОЛЬКО для устройств с hover) */
-@media (hover: hover) {
-	.submenu-trigger:hover .submenu {
-		@apply pointer-events-auto visible scale-100 opacity-100;
-	}
-
-	.submenu-trigger:hover .submenu-icon {
-		@apply rotate-180;
-	}
-}
-/* Click (JS state) */
-.submenu-trigger.is-open .submenu {
-	@apply pointer-events-auto visible scale-100 opacity-100;
-}
-
-.submenu-trigger.is-open .submenu-icon {
-	@apply rotate-180;
 }

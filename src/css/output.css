@@ -1516,6 +1516,7 @@
     transition-duration: var(--tw-duration, var(--default-transition-duration));
     --tw-duration: 200ms;
     transition-duration: 200ms;
+    display: none;
   }
   .submenu-trigger.is-open .submenu {
     pointer-events: auto;
@@ -1827,32 +1828,6 @@
 .player {
   background: red;
   height: 100px !important;
-}
-@media (hover: hover) {
-  .submenu-trigger:hover .submenu {
-    pointer-events: auto;
-    visibility: visible;
-    --tw-scale-x: 100%;
-    --tw-scale-y: 100%;
-    --tw-scale-z: 100%;
-    scale: var(--tw-scale-x) var(--tw-scale-y);
-    opacity: 100%;
-  }
-  .submenu-trigger:hover .submenu-icon {
-    rotate: 180deg;
-  }
-}
-.submenu-trigger.is-open .submenu {
-  pointer-events: auto;
-  visibility: visible;
-  --tw-scale-x: 100%;
-  --tw-scale-y: 100%;
-  --tw-scale-z: 100%;
-  scale: var(--tw-scale-x) var(--tw-scale-y);
-  opacity: 100%;
-}
-.submenu-trigger.is-open .submenu-icon {
-  rotate: 180deg;
 }
 @property --tw-rotate-x {
   syntax: "*";
