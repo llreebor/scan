@@ -1517,6 +1517,10 @@
     --tw-duration: 200ms;
     transition-duration: 200ms;
     display: none;
+    position: relative;
+    isolation: isolate;
+    will-change: transform, opacity;
+    transform-origin: top right;
   }
   .submenu-trigger.is-open .submenu {
     pointer-events: auto;
