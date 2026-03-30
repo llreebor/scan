@@ -1,26 +1,28 @@
 // Initialize submenu toggle functionality for both desktop and mobile
 function initializeSubmenu() {
 	const triggers = document.querySelectorAll(".submenu-trigger")
+	const isHoverDevice = window.matchMedia("(hover: hover)").matches
 
 	triggers.forEach((trigger) => {
 		const btn = trigger.querySelector('[aria-haspopup="true"]')
 		if (!btn) return
 
 		btn.addEventListener("click", (e) => {
+			// 👉 На desktop НЕ ломаем hover
+			if (isHoverDevice) return
+
 			e.stopPropagation()
 
 			const isOpen = trigger.classList.contains("is-open")
 
-			// Close all open submenus
-			document.querySelectorAll(".submenu-trigger.is-open").forEach((el) => {
+			document.querySelectorAll(".submenu-trigger").forEach((el) => {
 				el.classList.remove("is-open")
-				el.querySelector('[aria-haspopup="true"]').setAttribute(
+				el.querySelector('[aria-haspopup="true"]')?.setAttribute(
 					"aria-expanded",
 					"false",
 				)
 			})
 
-			// Open current submenu if it was closed
 			if (!isOpen) {
 				trigger.classList.add("is-open")
 				btn.setAttribute("aria-expanded", "true")
@@ -28,16 +30,18 @@ function initializeSubmenu() {
 		})
 	})
 
-	// Click outside any submenu — close all
-	document.addEventListener("click", () => {
-		document.querySelectorAll(".submenu-trigger.is-open").forEach((el) => {
-			el.classList.remove("is-open")
-			el.querySelector('[aria-haspopup="true"]').setAttribute(
-				"aria-expanded",
-				"false",
-			)
+	// outside click только для mobile
+	if (!isHoverDevice) {
+		document.addEventListener("click", () => {
+			document.querySelectorAll(".submenu-trigger").forEach((el) => {
+				el.classList.remove("is-open")
+				el.querySelector('[aria-haspopup="true"]')?.setAttribute(
+					"aria-expanded",
+					"false",
+				)
+			})
 		})
-	})
+	}
 }
 
 // Initialize custom language select
@@ -115,7 +119,7 @@ function initializeCustomSelects() {
 // Inits
 document.addEventListener("DOMContentLoaded", () => {
 	// Mobile Submenu
-	// initializeSubmenu()
+	initializeSubmenu()
 
 	// Lang Select
 	initializeCustomSelects()
